@@ -6,11 +6,6 @@ This is the repo for all my projects at Boise CodeWorks!
 	To get to the desired project page, input the file pathway (folders + project name) into the url after the last "/".
 </p>
 
-<p>
-	ex/ <a href="https://ewood-coder.github.io/boiseCodeWorks/Week1/petcare">
-		https://ewood-coder.github.io/boiseCodeWorks/<div style="color:red;">Week1/petcare</div></a>
-</p>
-
 <hr />
 
 <div>
