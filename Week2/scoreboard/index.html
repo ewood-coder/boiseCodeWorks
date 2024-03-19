@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Scoreboard</title>
+	<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
+		integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="app.js" defer></script>
+</head>
+
+<body>
+
+	<main class="container-fluid">
+		<div class="row d-flex justify-content-center">
+
+			<!-- ANCHOR: TEAM 1 BOX -->
+			<div class="col-5 box bg-primary text-center m-3 rounded">
+				<h1 class="pb-5">TEAM 1</h1>
+				<h2>
+					SCORE:
+					<p class="pt-5" id="home-score">0</p>
+				</h2>
+
+				<button onclick="addPointHome1()" class="rounded rounded-pill bg-success p-2 mt-5 mb-3 text-light">+1
+					point</button>
+
+				<button onclick="addPointHome3()" class="rounded rounded-pill bg-success p-2 mt-5 mb-3 text-light">+3
+					points</button>
+
+				<button onclick="addPointHome5()" class="rounded rounded-pill bg-success p-2 mt-5 mb-3 text-light">+5
+					points</button><br />
+
+				<button onclick="removePointHome()" class="rounded rounded-pill bg-danger p-2 mt-1 mb-3 text-light">-1
+					point</button>
+			</div>
+
+
+
+
+			<!-- ANCHOR: TEAM 2 BOX -->
+			<div class="col-5 box bg-warning text-center m-3 rounded">
+				<h1 class="pb-5">TEAM 2</h1>
+				<h2>
+					SCORE:
+					<p class="pt-5" id="away-score">0</p>
+				</h2>
+
+				<button onclick="addPointAway1()" class="rounded rounded-pill bg-success p-2 mt-5 mb-3 text-light">+1
+					point</button>
+
+				<button onclick="addPointAway3()" class="rounded rounded-pill bg-success p-2 mt-5 mb-3 text-light">+3
+					points</button>
+
+				<button onclick="addPointAway5()" class="rounded rounded-pill bg-success p-2 mt-5 mb-3 text-light">+5
+					points</button><br />
+
+				<button onclick="removePointAway()" class="rounded rounded-pill bg-danger p-2 mt-1 mb-3 text-light">-1
+					point</button>
+			</div>
+
+		</div>
+
+
+		<div class="d-flex justify-content-center">
+			<button onclick="newGame()" class="row rounded rounded-pill bg-purple p-2 mt-1 px-5 text-light" text-light">New
+				Game</button>
+		</div>
+	</main>
+
+</body>
+
+</html>

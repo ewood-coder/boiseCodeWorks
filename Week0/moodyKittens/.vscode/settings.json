@@ -1,0 +1,8 @@
+{
+	"prettier.tabWidth": 3,
+	"editor.stickyScroll.scrollWithEditor": false,
+	"workbench.tree.enableStickyScroll": false,
+	"editor.stickyScroll.enabled": false,
+	"editor.tabSize": 3,
+	"editor.detectIndentation": false
+}

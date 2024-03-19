@@ -1,0 +1,36 @@
+:root {
+	--secondary: #469AE0;
+}
+
+html {
+	margin: 0;
+}
+
+.width100 {
+	text-align: justify;
+	width: 100%;
+}
+
+.firstColumn {
+	background-color: #469AE0;
+}
+
+.jumbotron {
+	background-image: url("man2.png");
+	background: contain;
+
+	background-size: cover;
+	background-position: top;
+}
+
+.ps-6 {
+	padding: 20em;
+}
+
+.pt-6 {
+	padding-top: 6em;
+}
+
+.pb-6 {
+	padding-bottom: 6em;
+}

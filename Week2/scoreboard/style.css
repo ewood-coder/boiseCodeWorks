@@ -1,0 +1,7 @@
+:root {
+	--purple: rgb(171, 8, 171);
+}
+
+.bg-purple {
+	background-color: var(--purple);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Moody Kittens | CodeWorks</title>
+		<link rel="shortcut icon" href="moody-logo.png" type="image/x-icon" />
+		<link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Fauna+One&display=swap" rel="stylesheet" />
+		<link
+			href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			rel="stylesheet"
+			integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+			crossorigin="anonymous" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://www.flaticon.com/free-icons/cat" title="cat icons" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<header class="bg-dark d-flex align-items-center p-1 space-between">
+			<img src="moody-logo.png" height="60" alt="Moody Kittens" />
+			<form class="" onsubmit="addKitten(event)">
+				<div class="d-flex">
+					<input placeholder="Enter Cat Name" type="text" name="name" required />
+					<button class="btn-special" type="submit">/ᐠ｡ꞈ｡ᐟ\</button>
+				</div>
+			</form>
+		</header>
+
+		<main class="container">
+			<div class="p-2">
+				<div id="kittens-list" class="d-flex align-items-center flex-wrap">
+					<!-- <div class="exampleKitten">
+						<h3 class="mt-1 mb-1">Example Kitten</h3>
+						<div class="space-between">
+							<div>
+								<img class="kitten" src="img/happyCat.png" alt="Picture of happy cat" />
+							</div>
+							<div class="mb-1">
+								<p>Mood: | Affection:</p>
+								<button class="sameSize pt-3 pb-3" type="button">PET</button>
+								<button class="sameSize pt-3 pb-3" type="button">CATNIP</button>
+								<button class="sameSize pt-3 pb-3" type="button">REMOVE</button>
+							</div>
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</main>
+
+		<footer class="card bg-dark text-light p-2 d-flex align-items-center justify-content-center">
+			<small> Created with <span style="color: var(--primary)">&hearts;</span> by Emma</small>
+		</footer>
+
+		<script src="app.js"></script>
+	</body>
+</html>

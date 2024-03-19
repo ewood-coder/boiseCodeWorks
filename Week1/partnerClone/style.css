@@ -1,0 +1,76 @@
+html {
+	margin: 0;
+}
+
+.bgImg {
+	background-image: url("assets/skyscraper.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.ppImg {
+	-webkit-mask-image: url("assets/carCircle1.png");
+	mask-image: url("assets/carCircle1.png");
+	-webkit-mask-repeat: inherit;
+	mask-repeat: inherit;
+}
+
+.beige-bg {
+	background-color: #f5f5f5;
+}
+
+.dot {
+	background-color: #146c43;
+	border-radius: 50%;
+	display: inline-block;
+	line-height: 1em;
+	padding: .15em;
+}
+
+.special-pill {
+	transform: translate(-34px);
+	z-index: 999;
+}
+
+.fullSize {
+	width: 100%;
+	height: 100%;
+}
+
+.widthP {
+	width: 25%;
+	height: 25%;
+}
+
+.navbar {
+	width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+
+	.widthP {
+		width: 100%;
+		height: 100%;
+	}
+
+	.noMarginImg {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: end;
+	}
+
+	.fillImg {
+		margin-top: 50px;
+		margin-bottom: 15px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+
+	.widthAbout {
+		width: 80%;
+		height: 80%;
+	}
+}
