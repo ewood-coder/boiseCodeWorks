@@ -10,9 +10,7 @@ function addPointHome1() {
 	home += 1
 	console.log('Home Score: ' + home)
 
-	document.getElementById('home-score').innerHTML = '' + home
-
-
+	draw()
 	calcWinner()
 }
 
@@ -20,9 +18,7 @@ function addPointHome3() {
 	home += 3
 	console.log('Home Score: ' + home)
 
-	document.getElementById('home-score').innerHTML = '' + home
-
-
+	draw()
 	calcWinner()
 }
 
@@ -30,9 +26,7 @@ function addPointHome5() {
 	home += 5
 	console.log('Home Score: ' + home)
 
-	document.getElementById('home-score').innerHTML = '' + home
-
-
+	draw()
 	calcWinner()
 }
 
@@ -45,7 +39,7 @@ function removePointHome() {
 	console.log('Home Score: ' + home +
 		' | Removed Point')
 
-	document.getElementById('home-score').innerHTML = '' + home
+	draw()
 }
 
 // ******************************************** 
@@ -57,9 +51,7 @@ function addPointAway1() {
 	away += 1
 	console.log('Away Score: ' + away)
 
-	document.getElementById('away-score').innerHTML = '' + away
-
-
+	draw()
 	calcWinner()
 }
 
@@ -67,9 +59,7 @@ function addPointAway3() {
 	away += 3
 	console.log('Away Score: ' + away)
 
-	document.getElementById('away-score').innerHTML = '' + away
-
-
+	draw()
 	calcWinner()
 }
 
@@ -77,9 +67,7 @@ function addPointAway5() {
 	away += 5
 	console.log('Away Score: ' + away)
 
-	document.getElementById('away-score').innerHTML = '' + away
-
-
+	draw()
 	calcWinner()
 }
 
@@ -92,17 +80,16 @@ function removePointAway() {
 	console.log('Away Score: ' + away +
 		' | Removed Point')
 
-	document.getElementById('away-score').innerHTML = '' + away
+	draw()
 }
 
 // ******************************************** 
 
 // ANCHOR: BOTH TEAM FUNCTIONS
-// function draw() {
-
-
-// 	newGame()
-// }
+function draw() {
+	document.getElementById('home-score').innerHTML = '' + home
+	document.getElementById('away-score').innerHTML = '' + away
+}
 
 function calcWinner() {
 
@@ -122,10 +109,7 @@ function newGame() {
 	home = 0
 	away = 0
 
-	document.getElementById('home-score').innerHTML = home.toString()
-
-	document.getElementById('away-score').innerHTML = away.toString()
-
+	draw()
 	console.log("|******** NEW GAME ********|")
 }
 
