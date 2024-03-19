@@ -18,8 +18,8 @@ This is the repo for all my projects at Boise CodeWorks!
 <a href="https://ewood-coder.github.io/boiseCodeWorks/Week0/moodyKittens" target="_blank">
 			https://ewood-coder.github.io/boiseCodeWorks/Week0/moodyKittens</a><br />
 
-<a href="https://ewood-coder.github.io/boiseCodeWorks/Week1/balloon-pop" target="_blank">
-			https://ewood-coder.github.io/boiseCodeWorks/Week1/balloon-pop</a><br /><br />
+<a href="https://ewood-coder.github.io/boiseCodeWorks/Week0/balloon-pop" target="_blank">
+			https://ewood-coder.github.io/boiseCodeWorks/Week0/balloon-pop</a><br /><br />
 
 <hr />
 
