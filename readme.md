@@ -36,6 +36,12 @@ This is the repo for all my projects at Boise CodeWorks!
 <a href="https://ewood-coder.github.io/boiseCodeWorks/Week1/petcare">
 			https://ewood-coder.github.io/boiseCodeWorks/Week1/petcare</a><br /><br />
 
+<span>
+<b>Weekly Checkpoint:</b>
+<a href="https://ewood-coder.github.io/siteCloneCP1/">
+			 https://ewood-coder.github.io/siteCloneCP1/</a><br /><br />
+</span>
+
 <hr />
 
 <h3 style="text-align:center;"><u>Week 2</u></h3>
