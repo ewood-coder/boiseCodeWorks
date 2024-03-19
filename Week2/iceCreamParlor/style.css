@@ -1,0 +1,112 @@
+:root {
+	--primaryBG: #FFF3C8;
+	--primaryText: #DAAD6A;
+
+	--secondary: #CBCBCB;
+	--tertiary: #F5F9F2;
+	--label: #12A0DF;
+
+	--cardBG: #FFF2F8;
+	--cardText: #D08C98;
+
+	--footerBG: #f9df84;
+	--footerText: #715f1a;
+}
+
+
+
+/**********************/
+/* ANCHOR: 
+HEADER & FOOTER CLASSES */
+
+.sectionBG {
+	background-color: var(--footerBG);
+}
+
+.sectionText {
+	color: var(--footerText);
+}
+
+.fixImg {
+	height: 4em;
+	width: 6em;
+}
+
+.navbar-brand:hover {
+	color: var(--footerText);
+}
+
+
+
+
+
+
+/***********************/
+/* ANCHOR: MAIN CLASSES */
+
+.mainBG {
+	background-color: var(--primaryBG);
+}
+
+.mainText {
+	color: var(--primaryText);
+}
+
+
+/* SECTION: text scroller */
+#scroll-container {
+	border: 3px solid var(--cardText);
+	background-color: var(--primaryText);
+	color: black;
+	overflow: hidden;
+}
+
+#scroll-text {
+	/* animation properties */
+	-moz-transform: translateX(100%);
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+
+	-moz-animation: my-animation 15s linear infinite;
+	-webkit-animation: my-animation 15s linear infinite;
+	animation: my-animation 15s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+	from {
+		-moz-transform: translateX(100%);
+	}
+
+	to {
+		-moz-transform: translateX(-100%);
+	}
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+	from {
+		-webkit-transform: translateX(100%);
+	}
+
+	to {
+		-webkit-transform: translateX(-100%);
+	}
+}
+
+@keyframes my-animation {
+	from {
+		-moz-transform: translateX(100%);
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+
+	to {
+		-moz-transform: translateX(-100%);
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+}
+
+
+/* SECTION: Menu Area */
