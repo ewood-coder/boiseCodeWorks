@@ -14,21 +14,21 @@ This is the repo for all my projects at Boise CodeWorks!
 <hr />
 
 <div>
-	<h2 style="text-align:center;"><b><u>|  Live Page Project Links  |</u></b></h2><br /><br />
+	<h2 style="text-align:center;"><b>|  Live Page Project Links  |</b></h2><br />
 	
-<h4 style="text-align:center;"><u>Week 0 (precourse work)</u></h4><br />
+<h3 style="text-align:center;"><u>Week 0 (precourse work)</u></h3>
 <a href="https://ewood-coder.github.io/boiseCodeWorks/Week0/contact">
 			https://ewood-coder.github.io/boiseCodeWorks/Week0/contact</a><br />
 
 <a href="https://ewood-coder.github.io/boiseCodeWorks/Week0/moodyKittens">
-			https://ewood-coder.github.io/boiseCodeWorks/Week0/moodyKittens</a><br /><br />
+			https://ewood-coder.github.io/boiseCodeWorks/Week0/moodyKittens</a><br />
+
+<a href="https://ewood-coder.github.io/boiseCodeWorks/Week1/balloon-pop">
+			https://ewood-coder.github.io/boiseCodeWorks/Week1/balloon-pop</a><br /><br />
 
 <hr />
 
-<h4 style="text-align:center;"><u>Week 1</u></h4><br />
-<a href="https://ewood-coder.github.io/boiseCodeWorks/Week1/balloon-pop">
-			https://ewood-coder.github.io/boiseCodeWorks/Week1/balloon-pop</a><br />
-
+<h3 style="text-align:center;"><u>Week 1</u></h3>
 <a href="https://ewood-coder.github.io/boiseCodeWorks/Week1/cloneSite">
 			https://ewood-coder.github.io/boiseCodeWorks/Week1/cloneSite</a><br />
 
@@ -39,12 +39,11 @@ This is the repo for all my projects at Boise CodeWorks!
 			https://ewood-coder.github.io/boiseCodeWorks/Week1/partnerClone</a><br />
 
 <a href="https://ewood-coder.github.io/boiseCodeWorks/Week1/petcare">
-			https://ewood-coder.github.io/boiseCodeWorks/Week1/petcare</a><br />
+			https://ewood-coder.github.io/boiseCodeWorks/Week1/petcare</a><br /><br />
 
 <hr />
 
-<h4 style="text-align:center;"><u>Week 2</u></h4>
-
+<h3 style="text-align:center;"><u>Week 2</u></h3>
 <a href="https://ewood-coder.github.io/boiseCodeWorks/Week2/scoreboard">
 			https://ewood-coder.github.io/boiseCodeWorks/Week2/scoreboard</a><br />
 
