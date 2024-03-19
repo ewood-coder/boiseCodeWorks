@@ -9,7 +9,7 @@ This is the repo for all my projects at Boise CodeWorks!
 <hr />
 
 <div>
-	<h1 style="text-align:center; color:blue;"><b>|  Live Page Project Links |</b></h1><br />
+	<h1 style="text-align:center; color:red;"><b>|  Live Page Project Links |</b></h1><br />
 	
 <h3 style="text-align:center;"><u>Week 0 (precourse work)</u></h3>
 <a href="https://ewood-coder.github.io/boiseCodeWorks/Week0/contact">
