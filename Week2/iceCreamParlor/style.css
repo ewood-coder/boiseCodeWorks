@@ -130,3 +130,9 @@ HEADER & FOOTER CLASSES */
 .pinkText {
 	color: var(--cardText);
 }
+
+.fixCardImg {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
