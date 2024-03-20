@@ -124,12 +124,22 @@ const players = [
 ]
 
 
+
 function draftPlayers() {
 	console.log('Drafting Teams')
 
-	for (let i = 0; i <= players.length; i++) {
 
-	}
+	players.forEach((player) => {
+		let team = Math.random();
+
+		if (team < 0.5) {
+			player.teamNumber = 1;
+		}
+		else {
+			player.teamNumber = 2;
+		}
+		console.log(player.teamNumber)
+	});
 }
 
 
