@@ -48,4 +48,7 @@ This is the repo for all my projects at Boise CodeWorks!
 <a href="https://ewood-coder.github.io/boiseCodeWorks/Week2/scoreboard" target="_blank">
 			https://ewood-coder.github.io/boiseCodeWorks/Week2/scoreboard</a><br />
 
+<a href="https://ewood-coder.github.io/boiseCodeWorks/Week2/iceCreamParlor" target="_blank">
+			https://ewood-coder.github.io/boiseCodeWorks/Week2/iceCreamParlor</a><br />
+
 </div>
