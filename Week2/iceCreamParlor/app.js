@@ -84,6 +84,24 @@ function orderTopping(topping) {
 
 
 
+function clearCart() {
+
+	iceCream.forEach((iceCreamFlavor) => {
+		iceCreamFlavor.quantity = 0
+	});
+
+	toppings.forEach((topping) => {
+		topping.quantity = 0
+	});
+
+	cones.forEach((cone) => {
+		cone.quantity = 0
+	});
+
+	drawCart()
+	drawTotalCost()
+}
+
 
 
 function calcTotalCost() {
@@ -114,9 +132,20 @@ function drawTotalCost() {
 	let totalCost = calcTotalCost()
 
 	document.getElementById('totalAmount').innerText = totalCost.toString()
+
+
+
+	let clearCart = document.getElementById('payBtn')
+	if (totalCost > 0) {
+		clearCart.classList.remove('hidden')
+	}
+	else {
+		clearCart.classList.add('hidden')
+	}
 }
 
 function drawCart() {
+
 	let cartElm = document.getElementById('cart')
 	let cartContent = ''
 
