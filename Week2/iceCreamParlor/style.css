@@ -5,6 +5,7 @@
 	--secondary: #CBCBCB;
 	--tertiary: #F5F9F2;
 	--label: #12A0DF;
+	--white: white;
 
 	--cardBG: #FFF2F8;
 	--cardText: #D08C98;
@@ -110,3 +111,22 @@ HEADER & FOOTER CLASSES */
 
 
 /* SECTION: Menu Area */
+.secondaryBG {
+	background-color: var(--secondary);
+}
+
+.whiteBG {
+	background-color: var(--white);
+}
+
+.borderGray {
+	border-color: var(--secondary);
+}
+
+.pinkBG {
+	background-color: var(--cardBG);
+}
+
+.pinkText {
+	color: var(--cardText);
+}
