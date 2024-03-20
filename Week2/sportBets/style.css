@@ -1,0 +1,108 @@
+:root {
+	--hotPink: #FF1B6D;
+}
+
+.pink {
+	color: var(--hotPink);
+	border-bottom: solid;
+	border-color: var(--hotPink);
+	border-width: 10px;
+}
+
+
+
+
+/* ANCHOR: STYLES FROM W3SCHOOLS */
+
+html {
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Audiowide", sans-serif;
+	background: url(assets/stadium50.png);
+	background-size: cover;
+}
+
+/* Header/Blog Title */
+.header {
+	padding: 5px;
+	background: none;
+}
+
+.header h1 {
+	font-size: 50px;
+}
+
+
+
+
+/* Fake image */
+.fakeimg {
+	background-color: #aaa;
+	width: 100%;
+	padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+	/* background-color: transparent; */
+	background-color: white;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+.buttonsT1 {
+	background-color: #DB4BFF;
+	padding: 5px 10px;
+	text-align: center;
+	display: inline-block;
+	margin: 20px 20px;
+	border-radius: 40px;
+}
+
+.buttonsT2 {
+	background-color: #4BC9FF;
+	padding: 5px 10px;
+	text-align: center;
+	display: inline-block;
+	margin: 20px 20px;
+	border-radius: 40px;
+}
+
+.playersT1 {
+	background-color: #191919;
+	border: solid;
+	border-color: #DB4BFF;
+	padding: 20px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 4px 2px;
+	border-radius: 40px;
+}
+
+.playersT2 {
+	background-color: #191919;
+	border: solid;
+	border-color: #4BC9FF;
+	padding: 20px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 4px 2px;
+	border-radius: 40px;
+}
+
+.buttonBank {
+	background-color: #B5FF88;
+	padding: 20px 20px;
+	text-align: center;
+	display: inline-block;
+	margin: 20px 20px;
+	border-radius: 40px;
+}
