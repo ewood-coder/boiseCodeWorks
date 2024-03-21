@@ -37,7 +37,7 @@ This is the repo for all my projects at Boise CodeWorks!
 			https://ewood-coder.github.io/boiseCodeWorks/Week1/petcare</a><br /><br />
 
 <span>
-<b>Weekly Checkpoint:</b>
+<b>Week 1 Checkpoint:</b>
 <a href="https://ewood-coder.github.io/siteCloneCP1/" target="_blank">
 			 https://ewood-coder.github.io/siteCloneCP1/</a><br /><br />
 </span>
@@ -53,5 +53,15 @@ This is the repo for all my projects at Boise CodeWorks!
 
 <a href="https://ewood-coder.github.io/boiseCodeWorks/Week2/sportBets" target="_blank">
 			https://ewood-coder.github.io/boiseCodeWorks/Week2/sportBets</a><br />
+
+<a href="https://ewood-coder.github.io/boiseCodeWorks/Week2/bossMonster" target="_blank">
+			https://ewood-coder.github.io/boiseCodeWorks/Week2/bossMonster</a><br /><br />
+
+<b>Week 2 Checkpoint:</b>
+
+			
+
+
+
 
 </div>
