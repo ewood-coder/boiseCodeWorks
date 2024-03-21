@@ -1,4 +1,7 @@
 let bank = 100
+let betsWon = 0
+let betsLost = 0
+
 
 const players = [
 	{
@@ -167,7 +170,6 @@ function drawTeam() {
 function betTeam(betAmount, teamNumber) {
 	let initialValue = 0
 
-
 	// BET IT ALL IF CASE
 	if (betAmount == 'all') {
 		betAmount = bank
@@ -198,20 +200,24 @@ function betTeam(betAmount, teamNumber) {
 		if (teamNumber == 1) {
 			bank += betAmount
 			window.alert('You Win: $' + betAmount)
+			betsWon++
 		}
 		else {
 			bank -= betAmount
 			window.alert('You Lose: $' + betAmount)
+			betsLost++
 		}
 	}
 	else {
 		if (teamNumber == 2) {
 			bank += betAmount
 			window.alert('You Win: $' + betAmount)
+			betsWon++
 		}
 		else {
 			bank -= betAmount
 			window.alert('You Lose: $' + betAmount)
+			betsLost++
 		}
 	}
 	console.log('Amount in Bank:', bank)
@@ -222,6 +228,7 @@ function betTeam(betAmount, teamNumber) {
 	}
 
 	drawBank()
+	drawWonLost()
 	draftPlayers()
 }
 
@@ -231,6 +238,14 @@ function drawBank() {
 	bankElm.innerHTML = bank.toString()
 }
 
+function drawWonLost() {
+	let betsWonElm = document.getElementById('betsWon')
+	let betsLostElm = document.getElementById('betsLost')
 
+	betsWonElm.innerHTML = betsWon.toString()
+	betsLostElm.innerHTML = betsLost.toString()
+}
+
+drawWonLost()
 drawBank()
 draftPlayers()
