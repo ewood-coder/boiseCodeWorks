@@ -1,6 +1,4 @@
 
-
-
 const heroes = [
 	{
 		name: 'Slate Slabrock',
@@ -57,4 +55,19 @@ function damageHeroes() {
 	})
 
 	console.log('Damage to Heroes:', boss.damage)
+}
+setInterval(damageHeroes, 1000)
+
+
+
+
+
+
+
+function updateHeroes() {
+
+}
+
+function updateBoss() {
+
 }
