@@ -1,0 +1,17 @@
+.bossBox {
+	height: 30em;
+	width: 30em;
+	border: solid;
+	border-color: black;
+}
+
+.hero {
+	height: 15em;
+	width: 15em;
+	background-color: gray;
+}
+
+.bossImg {
+
+	background-size: cover;
+}

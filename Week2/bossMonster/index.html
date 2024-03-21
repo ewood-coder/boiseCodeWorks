@@ -10,10 +10,52 @@
 	<title>Boss Monster</title>
 	<link rel="stylesheet" href="style.css">
 	<script src="app.js" defer></script>
+
+
+	<script id="debug-script" src="https://cdn.jsdelivr.net/gh/MickShannahan/style-debug@latest/debug.min.js"
+		defer></script>
 </head>
 
-<body>
+<body class="debug">
+	<main class="container-fluid">
+		<div class="row">
+			<div id="hero1" class="hero col-2 me-5">
+				<div class="row">
+					<img class="heroImg">Image</img>
+				</div>
+				<div id="heroStats" class="row">
+					<h5 class="heroName">Name</h5>
+					<h5 class="heroHealth">Health</h5>
+				</div>
+			</div>
 
+			<div id="hero2" class="hero col-2">
+				<div class="row">
+					<img class="heroImg">Image</img>
+				</div>
+				<div id="heroStats" class="row">
+					<h5 class="heroName">Name</h5>
+					<h5 class="heroHealth">Health</h5>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row justify-content-center my-5">
+			<div id="mainBoss" class="bossBox col-8">
+				<div class="row">
+					<img src="assets/boss.png" class="bossImg col" onclick="attackBoss()"></img>
+				</div>
+				<div id="bossStats" class="row">
+					<h5 class="bossName">Name</h5>
+					<h5 class="bossHealth">Health</h5>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row"></div>
+	</main>
 </body>
 
 </html>
