@@ -128,7 +128,6 @@ const players = [
 function draftPlayers() {
 	console.log('Drafting Teams')
 
-
 	players.forEach((player) => {
 		let team = Math.random();
 
@@ -140,9 +139,98 @@ function draftPlayers() {
 		}
 		console.log(player.teamNumber)
 	});
+
+	drawTeam()
+}
+
+function drawTeam() {
+
+	let team1 = document.getElementById('team1')
+	let team2 = document.getElementById('team2')
+
+	let team1HTML = ''
+	let team2HTML = ''
+
+	players.forEach((player) => {
+		if (player.teamNumber == 1) {
+			team1HTML += player.emoji
+		}
+		else if (player.teamNumber == 2) {
+			team2HTML += player.emoji
+		}
+	});
+
+	team1.innerHTML = team1HTML
+	team2.innerHTML = team2HTML
+}
+
+function betTeam(betAmount, teamNumber) {
+	let initialValue = 0
+
+
+	// BET IT ALL IF CASE
+	if (betAmount == 'all') {
+		betAmount = bank
+	}
+
+	if (betAmount > bank) {
+		window.alert("BROKE AH BITCH, CAN'T BET WATCHU DON'T HAVE")
+		return
+	}
+
+
+	const team1 = players.filter((player) => player.teamNumber == 1);
+	const team2 = players.filter((player) => player.teamNumber == 2);
+
+	const totalSkillT1 = team1.reduce(
+		(accumulator, player) => accumulator + (player.skill),
+		initialValue
+	);
+	const totalSkillT2 = team2.reduce(
+		(accumulator, player) => accumulator + (player.skill),
+		initialValue
+	);
+
+	console.log('Team 1 Skill:', totalSkillT1)
+	console.log('Team 2 Skill:', totalSkillT2)
+
+	if (totalSkillT1 > totalSkillT2) {
+		if (teamNumber == 1) {
+			bank += betAmount
+			window.alert('You Win: $' + betAmount)
+		}
+		else {
+			bank -= betAmount
+			window.alert('You Lose: $' + betAmount)
+		}
+	}
+	else {
+		if (teamNumber == 2) {
+			bank += betAmount
+			window.alert('You Win: $' + betAmount)
+		}
+		else {
+			bank -= betAmount
+			window.alert('You Lose: $' + betAmount)
+		}
+	}
+	console.log('Amount in Bank:', bank)
+
+	if (bank <= 0) {
+		window.alert('GAME OVER: GET TF OUT, U BROKE HOE')
+		window.close()
+	}
+
+	drawBank()
+	draftPlayers()
+}
+
+function drawBank() {
+	let bankElm = document.getElementById('bank')
+
+	bankElm.innerHTML = bank.toString()
 }
 
 
-
-
+drawBank()
 draftPlayers()
