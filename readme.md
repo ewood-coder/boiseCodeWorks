@@ -58,6 +58,8 @@ This is the repo for all my projects at Boise CodeWorks!
 			https://ewood-coder.github.io/boiseCodeWorks/Week2/bossMonster</a><br /><br />
 
 <b>Week 2 Checkpoint:</b>
+<a href="https://ewood-coder.github.io/moonMinerCP2/" target="_blank">
+			https://ewood-coder.github.io/moonMinerCP2/</a><br /><br />
 
 			
 
