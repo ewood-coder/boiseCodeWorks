@@ -18,20 +18,20 @@
 
 <body class="debug">
 	<main class="container-fluid">
-		<div class="row">
-			<div id="hero1" class="hero col-2 me-5">
+		<div id="heroes" class="row">
+			<div class="hero col-2 me-5">
 				<div class="row">
-					<img class="heroImg">Image</img>
+					<img src="assets/hero1.png" class="heroImg"></img>
 				</div>
-				<div id="heroStats" class="row">
-					<h5 id="Slate Slabrock" class="heroName">Name</h5>
-					<h5 class="heroHealth">Health</h5>
+				<div class="row">
+					<h5 class="col heroName"></h5>
+					<h5 class="col heroHealth"></h5>
 				</div>
 			</div>
 
 			<div id="hero2" class="hero col-2">
 				<div class="row">
-					<img class="heroImg">Image</img>
+					<img src="assets/hero2.png" class="heroImg"></img>
 				</div>
 				<div id="heroStats" class="row">
 					<h5 id="Flint Ironstag" class="heroName">Name</h5>
@@ -40,10 +40,16 @@
 			</div>
 		</div>
 
-		<button class="btn rounded rounded-pill btm-primary" onclick="damageHeroes()">Boss Attacks</button>
+		<div class="row">
+			<button class="col btn rounded rounded-pill btm-primary" onclick="damageHeroes()">Boss Attacks</button>
+		</div>
 
-		<div class="row justify-content-center my-5">
-			<div id="mainBoss" class="bossBox col-8">
+
+		<div id="mainBoss" class="justify-content-center my-5 p-5">
+			<!-- <div class="bossBox col-8">
+				<div class="row">
+					<h5 class="col">Heroes Earned Gold: ${gold}</h5>
+				</div>
 				<div class="row">
 					<img src="assets/boss.png" class="bossImg col" onclick="damageBoss()"></img>
 				</div>
@@ -51,7 +57,7 @@
 					<h5 class="bossName">Name</h5>
 					<h5 class="bossHealth">Health</h5>
 				</div>
-			</div>
+			</div> -->
 		</div>
 
 
