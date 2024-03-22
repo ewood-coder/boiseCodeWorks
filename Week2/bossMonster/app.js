@@ -7,6 +7,7 @@ const heroes = [
 		damage: 5,
 		maxDamage: 5,
 		health: 100,
+		maxHealth: 100,
 		level: 6
 	},
 	{
@@ -15,6 +16,7 @@ const heroes = [
 		damage: 10,
 		maxDamage: 10,
 		health: 50,
+		maxHealth: 50,
 		level: 3
 	}
 ]
@@ -33,7 +35,9 @@ function damageBoss() {
 	let teamDamage = 0
 
 	heroes.forEach(hero => {
-		teamDamage += hero.damage
+		if (hero.health > 0) {
+			teamDamage += hero.damage
+		}
 	})
 
 	if (teamDamage >= boss.health) {
@@ -41,8 +45,9 @@ function damageBoss() {
 	} else if (teamDamage < boss.health) {
 		boss.health -= teamDamage
 	}
-	console.log('Damage to Boss:', teamDamage)
-	console.log('Boss Health:', boss.health)
+	console.log('👿 Damage to Boss:', teamDamage)
+	console.log('💜 Boss Health:', boss.health)
+	console.log("")
 
 	levelUpHeroes()
 	levelUpBoss()
@@ -59,18 +64,22 @@ function levelUpBoss() {
 		gold += boss.value
 
 		boss.value = boss.value * 2
-		console.log('Boss New Value:', boss.value)
+		console.log('💹 Boss New Value:', boss.value)
+		console.log("")
 	}
 }
 
 function levelUpHeroes() {
 	heroes.forEach((hero) => {
 		if (boss.health <= 0) {
-			hero.level++
-			hero.maxDamage = hero.maxDamage * 1.5
-			hero.damage = hero.maxDamage
+			if (hero.health > 0) {
+				hero.level++
+				hero.maxDamage = hero.maxDamage * 1.5
+				hero.damage = hero.maxDamage
 
-			console.log(hero.name, 'Leveled Up!')
+				console.log('🆙', hero.name, 'Leveled Up! 🆙')
+				console.log("")
+			}
 		}
 	});
 }
@@ -80,36 +89,40 @@ function damageHeroes() {
 
 		if (boss.damage >= hero.health) {
 			hero.health = 0
-			// loseGame()
 			return
 		} else if (boss.damage < hero.health) {
 			hero.health -= boss.damage * boss.level
 		}
 
-		console.log(hero.name, "|", hero.health)
+		console.log('🥷', hero.name, "|", '❤️‍🩹', hero.health)
 	})
-	console.log('Damage to Heroes:', boss.damage)
+	console.log('🩸 Damage to Heroes:', boss.damage)
+	console.log("")
 
 	drawHeroes()
+	loseGame()
 }
 
-const intervalID = setInterval(damageHeroes, 5000)
-setInterval(damageBoss, 2000)
+function healthpack(name) {
+	let healthpack = 50
+
+	if (gold < healthpack) {
+		console.log('🪙 NOT ENOUGH FUNDS 🪙')
+		console.log("")
+		return
+	}
+	gold -= healthpack
 
 
-// function loseGame() {
-// 	if (heroes.every(hero => hero.health <= 0)) {
-// 		clearInterval(intervalID)
-
-// 		console.log("GAME OVER")
-
-// 		window.alert("GAME OVER");
-// 		window.location.reload();
-// 	}
-// }
+	let hero = heroes.find(hero => {
+		return hero.name == name
+	})
+	hero.health = hero.maxHealth
 
 
-
+	console.log('💉 HEALING:', hero.name, '💉')
+	console.log("")
+}
 
 function drawHeroes() {
 	let heroesElem = document.getElementById('heroes')
@@ -118,7 +131,7 @@ function drawHeroes() {
 	heroes.forEach((hero, i) => {
 		if (hero.health > 0) {
 			heroesHTML += `
-			<div class="hero col-2 me-5">
+			<div class="hero col-2 me-5 m-5">
 				<div class="row">
 					<img src="assets/hero${i + 1}.png" class="heroImg"></img>
 				</div>
@@ -133,6 +146,12 @@ function drawHeroes() {
 				<div class="row">
 					<h5 class="col heroLevel">LVL:</h5>
 					<h5 class="col heroLevel text-end">${hero.level}</h5>
+				</div>
+				<div class="row">
+					<button class="col medpack text-center" 
+					onclick="healthpack('${hero.name}')">
+						<i class="mdi mdi-bottle-tonic-plus fs-3"></i>
+					</button>
 				</div>
 			</div>`
 		}
@@ -169,7 +188,20 @@ function drawBoss() {
 }
 
 
+const interval1 = setInterval(damageHeroes, 5000)
+const interval2 = setInterval(damageBoss, 2000)
 
+function loseGame() {
+	if (heroes.every(hero => hero.health <= 0)) {
+		clearInterval(interval1)
+		clearInterval(interval2)
+
+		console.log("🕹️ GAME OVER 🕹️")
+
+		window.alert("🕹️ GAME OVER 🕹️");
+		window.location.reload();
+	}
+}
 
 
 

@@ -22,3 +22,8 @@ body {
 #mainBoss {
 	margin-left: 45em;
 }
+
+.medpack {
+	background-color: rgb(249, 84, 66);
+	color: white;
+}
