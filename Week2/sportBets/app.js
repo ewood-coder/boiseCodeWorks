@@ -176,7 +176,7 @@ function betTeam(betAmount, teamNumber) {
 	}
 
 	if (betAmount > bank) {
-		window.alert("BROKE AH BITCH, CAN'T BET WATCHU DON'T HAVE")
+		window.alert("GETCHO MONEY UP, NOT YO FUNNY UP")
 		return
 	}
 
@@ -223,7 +223,7 @@ function betTeam(betAmount, teamNumber) {
 	console.log('Amount in Bank:', bank)
 
 	if (bank <= 0) {
-		window.alert('GAME OVER: GET TF OUT, U BROKE HOE')
+		window.alert("YOU'VE BEEN BANNED FROM THE MICKEY MOUSE CLUBHOUSE FOR INAPPROPRIATE BEHAVIOR")
 		window.close()
 	}
 
