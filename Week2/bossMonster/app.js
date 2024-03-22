@@ -173,5 +173,5 @@ function drawBoss() {
 
 
 
-drawHeroes()
 drawBoss()
+drawHeroes()
