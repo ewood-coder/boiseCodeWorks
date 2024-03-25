@@ -1,9 +1,10 @@
 import { AppState } from "../AppState.js";
 
 class CharacterService {
+	// NOTE: PERFORMS THE ACTION (changes data)
 	shankCharacter(characterName) {
 		console.log('🗡️🗡️🗡️');
-		AppState.character.find(character => character.name == characterName)
+		const characterToStab = AppState.characters.find(character => character.name == characterName)
 		console.log('Are you stabbing ', characterToStab);
 		characterToStab.health -= 3
 		console.log(characterToStab)
