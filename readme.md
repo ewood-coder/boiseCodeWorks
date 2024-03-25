@@ -66,8 +66,8 @@ This is the repo for all my projects at Boise CodeWorks!
 <hr />
 
 <h3 style="text-align:center;"><u>Week 3</u></h3>
-<a href="https://ewood-coder.github.io/boiseCodeWorks/Week3" target="_blank">
-			https://ewood-coder.github.io/boiseCodeWorks/Week3</a><br />
+<a href="https://ewood-coder.github.io/boiseCodeWorks/Week3/gameNight" target="_blank">
+			https://ewood-coder.github.io/boiseCodeWorks/Week3/gameNight</a><br />
 
 			
 
