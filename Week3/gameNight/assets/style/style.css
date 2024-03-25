@@ -1,1 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Warnes&display=swap');
+
 /* BASIC STYLES HERE */
+
+.nameText {
+	font-family: "Cabin Sketch", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.container {
+	color: #F3D179;
+	width: 30em;
+	/* margin-top: 1em;
+	padding-bottom: 27em; */
+}
+
+img {
+	border-radius: 50%;
+	width: 15%;
+	height: auto;
+}
+
+.newFont {
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 0 0 5px #feeab7, 0 0 10px #feeab7, 0 0 15px #707070, 0 0 20px #707070, 0 0 25px #707070, 0 0 30px #707070, 0 0 35px #707070;
+	font-size: 3em;
+	font-family: "Comfortaa", sans-serif;
+}
+
+.btnPlus {
+	color: #F3D179;
+	background-color: transparent;
+	border-width: 0;
+	padding: 0;
+}
+
+.btnMinus {
+	color: #F3D179;
+	background-color: transparent;
+	border-width: 0;
+	padding: 0;
+}
+
+.btnPlus:hover {
+	color: rgb(80, 153, 255);
+}
+
+.btnMinus:hover {
+	color: rgb(255, 87, 87);
+}
+
+.addPlayerBtn {
+	font-family: "Kanit", sans-serif;
+	font-style: italic;
+	background-color: #F3D179;
+	color: black;
+}

@@ -5,7 +5,7 @@ class App {
 
 	router = router
 
-	// NOTE: this creates an appwide controller for our user to access
+	// NOTE: this creates an app-wide controller for our user to access
 	CharacterController = new CharacterController()
 
 	init() {
