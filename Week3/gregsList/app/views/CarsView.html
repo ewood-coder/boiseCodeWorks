@@ -1,0 +1,52 @@
+<div class="bg-white p-3">
+  <div class="card-body">
+    <p>Cars Page</p>
+    <h1> Wanna buy a car?</h1>
+  </div>
+
+  <section class="container">
+    <form onsubmit="app.CarsController.createCar()" class="row border shadow my-3 rounded py-2">
+      <h4>Or how about sell a car?</h4>
+      <div class="col-4 mb-3">
+        <label for="">Make</label>
+        <input type="text" name="make" class="form-control" minlength="2" maxlength="25" required placeholder="Toyota">
+      </div>
+      <div class="col-4 mb-3">
+        <label for="">Model</label>
+        <input type="text" name="model" class="form-control" minlength="2" maxlength="25" required placeholder="neon">
+      </div>
+      <div class="col-4 mb-3">
+        <label for="">Year</label>
+        <input type="number" name="year" class="form-control" required min="1975" max="2030">
+      </div>
+      <div class="col-2 mb-3">
+        <label for="">Color</label>
+        <input type="color" name="color" class="form-control-color" required>
+      </div>
+      <div class="col-4 mb-3">
+        <label for="">Mileage</label>
+        <input type="range" name="mileage" class="form-range" required min="100" max="350000">
+      </div>
+      <div class="col-3 mb-3">
+        <label for="">Price</label>
+        <input type="number" name="price" class="form-control" value="100">
+      </div>
+      <div class="col mb-3">
+        <label for="">Automatic Transmission</label>
+        <input type="checkbox" name="automatic" class=" form-check">
+      </div>
+      <div class="col-12 mb-3">
+        <label for="">Image URL of car</label>
+        <input type="url" name="imgUrl" class=" form-control" required>
+      </div>
+      <div class="mb-2">
+        <button type="submit" class="btn btn-primary">submit</button>
+      </div>
+    </form>
+  </section>
+</div>
+<section class="container">
+  <div class="row" id="cars-list">
+
+  </div>
+</section>
