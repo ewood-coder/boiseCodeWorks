@@ -51,11 +51,11 @@
 	<!-- SECTION -->
 	<main>
 
-		<!-- <section id="router-view"> -->
-		<!-- primary viewport -->
-		<!-- </section> -->
+		<section id="router-view" class="hidden">
+			<!-- primary viewport -->
+		</section>
 
-		<section class="container text-center bg-dark">
+		<section class="container text-center bg-dark mb-4">
 			<h1 class="pt-5 mb-5 newFont">GAMENIGHT</h1>
 			<div id="player-list" class="bg-dark px-4">
 
@@ -64,9 +64,11 @@
 						<img class="col-2" src="assets/img/man1.jpg" alt="Avatar">
 						<span class="col-3 text-start nameText">Jeremy</span>
 						<span class="col text-end">
-							<button class="btnMinus"><i class="mdi mdi-minus-circle-outline"></i></button>
+							<button class="btnMinus" onclick="app.PlayersController.removePoint('${this.name}')"><i
+									class="mdi mdi-minus-circle-outline"></i></button>
 							<span class="text-light mx-1 fs-2">10</span>
-							<button class="btnPlus"><i class="mdi mdi-plus-circle-outline"></i></button>
+							<button class="btnPlus" onclick="app.PlayersController.addPoint('${this.name}')"><i
+									class="mdi mdi-plus-circle-outline"></i></button>
 						</span>
 					</h3>
 				</div>
@@ -108,7 +110,21 @@
 				</div>
 
 			</div>
-			<button class="btn btn-warning rounded mb-5 w-75 fs-3 addPlayerBtn">Add Player</button>
+
+			<button class="btn btn-warning rounded mb-4 w-75 fs-3 addPlayerBtn"
+				onclick="app.PlayersController.showForm()">Add Player</button>
+
+			<form id="formDisplay" class="mb-3 pb-3 fs-4 hidden" onsubmit="app.PlayersController.addPlayer(event)">
+				<div>
+					<label for="name">Player Name:</label>
+					<input class="my-2" type="text" minlength="2" maxlength="15" name="name" required />
+				</div>
+				<div>
+					<button class="formButtons fs-5 btn btn-warning rounded p-1 me-3" type="submit">Submit</button>
+					<button class="formButtons fs-5 btn btn-warning rounded p-1 ms-3" type="reset"
+						onclick="app.PlayersController.hideForm()">Cancel</button>
+				</div>
+			</form>
 		</section>
 
 	</main>

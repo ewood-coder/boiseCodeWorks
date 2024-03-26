@@ -56,3 +56,14 @@ img {
 	background-color: #F3D179;
 	color: black;
 }
+
+.formButtons {
+	font-family: "Kanit", sans-serif;
+	font-style: italic;
+	background-color: #F3D179;
+	color: black;
+}
+
+.hidden {
+	display: none;
+}

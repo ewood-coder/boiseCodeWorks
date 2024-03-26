@@ -1,12 +1,16 @@
 import { router } from './router-config.js';
+import { PlayersController } from './controllers/PlayersController.js';
 
 class App {
 
-  router = router
+	router = router
 
-  init() {
-    this.router.init(app)
-  }
+	// NOTE: this creates an app-wide controller for our user to access
+	PlayersController = new PlayersController()
+
+	init() {
+		this.router.init(app)
+	}
 
 }
 
