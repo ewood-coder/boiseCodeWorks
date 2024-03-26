@@ -18,6 +18,7 @@ class PlayerService {
 		const playerToRemove = AppState.players.find(player => player.name == playerName)
 		if (playerToRemove.score <= 0) {
 			console.log("❌ CANT DEDUCT POINTS FROM 0 ❌")
+			window.alert("❌ CANT DEDUCT POINTS FROM 0 ❌")
 			return
 		} else {
 			console.log('➖')
@@ -31,6 +32,7 @@ class PlayerService {
 	addPlayer(name) {
 		if (AppState.players.find((player) => player.name == name)) {
 			console.log("🔒🪪 PLAYER NAME TAKEN. PLEASE CHOOSE A NEW NAME. 🪪🔒")
+			window.alert("🔒🪪 Player name taken. Please choose a new name. 🪪🔒")
 			return
 		} else {
 			let newPlayer = new Player(name)
