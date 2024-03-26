@@ -1,1 +1,7 @@
 /* BASIC STYLES HERE */
+
+.cardImg {
+	width: auto;
+	height: 250px;
+	background-size: cover;
+}
