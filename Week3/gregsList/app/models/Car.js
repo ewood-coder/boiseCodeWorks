@@ -27,7 +27,7 @@ export class Car {
 					<div class="card-body">
 						<h3 class="card-title text-center text-success mb-3">${this.make} ${this.model} ${this.year}</h3>
 						<hr />
-						<span class="d-flex justify-content-between my-2">
+						<span class="d-flex justify-content-between my-4">
 							<h5 class="card-text"><u>Color:</u> ${this.color}</h5>
 							<h5 class="card-text">
 								<u>Mileage:</u> ${this.mileage}
