@@ -9,46 +9,75 @@
 			<h4>Or how about sell a house?</h4>
 			<div class="col-4 mb-3">
 				<label for="">Year</label>
-				<input type="text" name="year" class="form-control" minlength="2" maxlength="25" required
-					placeholder="2000">
+				<input type="number" name="year" class="form-control" required min="1920" max="2030" required
+					placeholder="ex\ 2000">
 			</div>
 			<div class="col-4 mb-3">
 				<label for="">Name</label>
-				<input type="text" name="name" class="form-control" minlength="2" maxlength="25" required
-					placeholder="Townhouse">
+				<input type="text" name="name" class="form-control" minlength="2" maxlength="25"
+					placeholder="ex\ Townhouse">
 			</div>
 			<div class="col-4 mb-3">
 				<label for="">Bedrooms</label>
-				<input type="number" name="bedrooms" class="form-control" required min="1975" max="2030">
+				<input type="number" name="bedrooms" class="form-control" minlength="2" maxlength="25" required>
 			</div>
 			<div class="col-2 mb-3">
 				<label for="">Bathrooms</label>
-				<input type="number" name="bathrooms" class="form-control" required>
+				<input type="number" name="bathrooms" class="form-control" minlength="2" maxlength="25" required>
 			</div>
 			<div class="col-4 mb-3">
 				<label for="">Square Footage</label>
-				<input type="number" name="sqft" class="form-control" required min="100" max="350000">
+				<input type="number" name="sqft" class="form-control" min="100" required>
 			</div>
 			<div class="col-3 mb-3">
 				<label for="">Price</label>
-				<input type="number" name="price" class="form-control" value="100">
+				<input type="number" name="price" class="form-control" value="100" required>
 			</div>
 			<div class="col mb-3">
 				<label for="">Description</label>
-				<input type="text" name="description" class="form-control">
+				<input type="text" name="description" class="form-control" placeholder="ex\ single family home">
 			</div>
 			<div class="col-12 mb-3">
 				<label for="">Image URL of house</label>
-				<input type="url" name="imgUrl" class=" form-control" required>
+				<input type="url" name="imgUrl" class=" form-control" placeholder="copy image address & paste here..."
+					required>
 			</div>
 			<div class="mb-2">
 				<button type="submit" class="btn btn-primary">submit</button>
 			</div>
 		</form>
 	</section>
+
+	<!-- SECTION: MODAL BUTTON ON HTML -->
+	<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#car-form-modal">
+		Launch demo modal
+	</button> -->
 </div>
+
+
+<!-- SECTION: MODAL -->
+<!-- <div class="modal fade" id="house-form-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div>
+	</div>
+</div> -->
+<!-------------------->
+
+
 <section class="container">
-	<div class="row" id="cars-list">
+	<div class="row" id="houses-list">
 
 	</div>
 </section>

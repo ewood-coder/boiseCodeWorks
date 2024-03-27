@@ -44,9 +44,9 @@ class ObservableAppState extends EventEmitter {
 
 	// SECTION: HOUSES
 	houses = [
-		new House({ year: '1974', bedrooms: 3, bathrooms: 2.5, sqft: 1400, price: 375000, description: 'Newly renovated mid-century modern home', imgUrl: 'https://rew-feed-images.global.ssl.fastly.net/imls/_cloud_media/property/residentialincome/98862307-1-835976ecc96808a93ea194115ae6c537-m.jpg' }),
+		new House({ year: '1974', name: 'modern house', bedrooms: 3, bathrooms: 2.5, sqft: 1400, price: 375000, description: 'Newly renovated mid-century modern home', imgUrl: 'https://cdn.onekindesign.com/wp-content/uploads/2021/08/Mid-Century-Modern-Home-Remodel-Addition-Klopf-Architecture-01-1-Kindesign.jpg' }),
 
-		new House({ year: '2001', bedrooms: 4, bathrooms: 2.5, sqft: 2700, price: 620000, description: 'Excellent condition single family home', imgUrl: 'https://maps.googleapis.com/maps/api/streetview?location=12253+W+Nancee+Dr%2C+Boise%2C+ID+83709&size=768x576&key=AIzaSyARFMLB1na-BBWf7_R3-5YOQQaHqEJf6RQ&source=outdoor&&signature=bwRPJ1wfhtscnok9arzvZa_0ZbI=' }),
+		new House({ year: '2001', name: 'suburban house', bedrooms: 4, bathrooms: 2.5, sqft: 2700, price: 620000, description: 'Excellent condition single family home', imgUrl: 'https://maps.googleapis.com/maps/api/streetview?location=12253+W+Nancee+Dr%2C+Boise%2C+ID+83709&size=768x576&key=AIzaSyARFMLB1na-BBWf7_R3-5YOQQaHqEJf6RQ&source=outdoor&&signature=bwRPJ1wfhtscnok9arzvZa_0ZbI=' }),
 	]
 
 

@@ -20,7 +20,7 @@ export class Car {
 	get CarCard() {
 		return `
 			<div class="col-6 col-md-4 my-4">
-				<div class="card">
+				<div class="card h-100">
 					<img class="card-img-top cardImg"
 						src="${this.imgUrl}"
 						alt="">
