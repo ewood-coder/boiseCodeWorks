@@ -17,6 +17,11 @@ p.card-text {
 	margin: 1em;
 }
 
+.pinkColor {
+	background-color: #fe315c;
+	color: white;
+}
+
 /* BASIC STYLES HERE */
 .navbar {
 	background-color: var(--bg-black);
