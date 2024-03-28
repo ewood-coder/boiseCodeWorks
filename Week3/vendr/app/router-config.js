@@ -5,6 +5,6 @@ export const router = new Router([
 	{
 		path: '',
 		controllers: [SnacksController],
-		view: 'index.html'
+		view: '/app/views/#/SnacksView.html'
 	},
 ])
