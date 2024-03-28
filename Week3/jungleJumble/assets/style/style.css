@@ -17,6 +17,8 @@ body {
 }
 
 .startButton {
-	width: 80%;
-	height: auto;
+	background-color: #F2CF58;
+	color: white;
+	border-radius: 10px;
+	border: none;
 }
