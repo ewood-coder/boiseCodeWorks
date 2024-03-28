@@ -3,8 +3,8 @@ import { Router } from "./utils/Router.js";
 
 export const router = new Router([
 	{
-		path: '',
+		path: '#/',
 		controllers: [SnacksController],
-		view: '/app/views/SnacksView.html'
+		view: 'app/views/SnacksView.html'
 	},
 ])
