@@ -19,13 +19,10 @@ export class Jumble {
 	}
 
 	get ListTemplate() { // a basic list template to get drawing
-		return `
-			<h4 class="text-center">Jumbles!</h4>
-			<li>${this.name}</li>
-		`
+		return `<li>${this.name}</li>`
 	}
 
 	get JumblesTextTemplate() {
-		return `<p id="jumbles-body">${this.body}</p>`
+		return `<p>${this.body}</p>`
 	}
 }

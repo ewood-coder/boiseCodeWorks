@@ -20,4 +20,5 @@ export class JumblesController {
 		setHTML('jumbles-list', jumblesContent)
 	}
 
+
 }

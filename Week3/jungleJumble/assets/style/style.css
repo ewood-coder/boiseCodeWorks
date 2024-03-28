@@ -1,16 +1,22 @@
 /* BASIC STYLES HERE */
+body {
+	background-image: url("../img/background.png");
+}
+
 .hidden {
 	display: hidden;
 }
 
 .box {
-	border: solid 2px;
+	border: solid 3px;
 	background-color: white;
 	color: black;
 	padding: 1rem;
 	margin: 2rem;
+	border-radius: 0.5rem;
 }
 
-body {
-	background-image: url("../img/background.png");
+.startButton {
+	width: 80%;
+	height: auto;
 }

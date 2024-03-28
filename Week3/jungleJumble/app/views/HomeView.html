@@ -1,25 +1,40 @@
-<section class="">
+<section class="container-fluid">
+	<span class="row">
 
-	<div class="box text-center">
-		<h1>Jungle Jumble</h1>
-	</div>
+		<div class="col-7">
 
-	<div id="jumbles-body" class="box">
-		<!-- TODO: Create box that displays the form text for creating your own jumble and includes the highest score for time -->
-		<h4>Easy Jumble</h4>
-		<p id="jumbles-body">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
-			industries for previewing layouts and visual mockups.</p>
-	</div>
+			<div class="box text-center w-50">
+				<h1>Jungle Jumble</h1>
+			</div>
 
-	<div class="box">
-		<!-- TODO: Create text box form that user types in to complete the challenge -->
-		<form action="">Form with input textbox for challenge</form>
-	</div>
+			<div id="jumbles-body" class="box">
+				<!-- TODO: Create box that displays the form text for creating your own jumble and includes the highest score for time -->
+				<h4>Easy Jumble</h4>
+				<div id="jumbles-body">
+					<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
+						industries for previewing layouts and visual mockups.</p>
+				</div>
+			</div>
 
-	<div class="box">
-		<h4 class="text-center">Jumbles!</h4>
-		<!-- TODO: Create box w/ form that displays all created jumbles, their high scores, the start buttons, and the create jumble form itself + create button -->
-		<span id="jumbles-list"></span>
-	</div>
+			<div class="box">
+				<!-- TODO: Create text box form that user types in to complete the challenge -->
+				<form action="">Form with input textbox for challenge</form>
+			</div>
 
+		</div>
+
+
+		<div class="col-5">
+			<div class="box">
+				<!-- TODO: Create box w/ form that displays all created jumbles, their high scores, the start buttons, and the create jumble form itself + create button -->
+				<h4 class="text-center">Jumbles!</h4>
+				<div class="jumbleRow row">
+					<button class="startButton col"></button>
+					<div class="col" id="jumbles-list"></div>
+					<span class="col">⏲️ 34.3s</span>
+				</div>
+			</div>
+		</div>
+
+	</span>
 </section>
