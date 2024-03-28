@@ -9,7 +9,10 @@
 
 			<div id="jumbles-body" class="box">
 				<!-- TODO: Create box that displays the form text for creating your own jumble and includes the highest score for time -->
-				<h4>Easy Jumble</h4>
+				<span class="row justify-content-between">
+					<h4 class="col-4">Easy Jumble</h4>
+					<h5 class="col-8 text-end">Fastest Time: 32.4s</h5>
+				</span>
 				<div id="jumbles-body">
 					<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
 						industries for previewing layouts and visual mockups.</p>
@@ -28,8 +31,21 @@
 			<div class="box">
 				<!-- TODO: Create box w/ form that displays all created jumbles, their high scores, the start buttons, and the create jumble form itself + create button -->
 				<h4 class="text-center fs-2">Jumbles!</h4>
-				<div class="row p-3 justify-content-between text-left fs-4" id="jumbles-list">
+				<div class="row p-3 justify-content-between text-left fs-4 align-items-center" id="jumbles-list">
 					<!-- inputted content from Jumble.js -->
+				</div>
+				<div class="mt-3">
+					<h4 class="text-center">Create Jumble</h4>
+					<form>
+						<div class="form-group">
+							<label for="formGroupExampleInput">Name</label>
+							<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+						</div>
+						<div class="form-group">
+							<label for="formGroupExampleInput2">Jumble</label>
+							<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
