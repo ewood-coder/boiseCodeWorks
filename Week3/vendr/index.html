@@ -31,7 +31,7 @@
 			</a>
 			<!-- STUB: ADD MONEY BUTTON -->
 			<div class="wrapper d-flex align-items-center">
-				<a class="cta" href="#">
+				<button class="cta align-items-center" href="#">
 					<span class="span">Add</span>
 					<span class="span">
 						<svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -50,19 +50,19 @@
 						</svg>
 					</span>
 					<span class="ms-4 span">$0.25</span>
-				</a>
+				</button>
 			</div>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+			<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
 				aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			</button> -->
+			<!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-					<!-- NAVLINKS -->
+					NAVLINKS
 					<a href="#/about" class="nav-link hidden">About</a>
 				</div>
-			</div>
-			<div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
+			</div> -->
+			<!-- <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div> -->
 		</nav>
 	</header>
 
@@ -73,8 +73,9 @@
 		</section>
 
 
-		<section class="container-fluid d-flex flex-wrap justify-content-evenly">
-			<div class="card col-3" style="width: 18rem;">
+		<section class="container-fluid d-flex flex-wrap justify-content-center">
+
+			<div class="card col-12 col-md-3" style="width: 18rem;">
 				<img src="assets/img/brusselsSprouts.jpg" class="card-img-top cardImg" alt="...">
 				<div class="card-body">
 					<span class="row">
@@ -90,7 +91,7 @@
 				</div>
 			</div>
 
-			<div class="card col-3" style="width: 18rem;">
+			<div class="card col-12 col-md-3" style="width: 18rem;">
 				<img src="assets/img/milk.jpg" class="card-img-top cardImg" alt="...">
 				<div class="card-body">
 					<span class="row">
@@ -106,7 +107,7 @@
 				</div>
 			</div>
 
-			<div class="card col-3" style="width: 18rem;">
+			<div class="card col-12 col-md-3" style="width: 18rem;">
 				<img src="assets/img/Meatballs.jpg" class="card-img-top cardImg" alt="...">
 				<div class="card-body">
 					<span class="row">
@@ -122,7 +123,7 @@
 				</div>
 			</div>
 
-			<div class="card col-3" style="width: 18rem;">
+			<div class="card col-12 col-md-3" style="width: 18rem;">
 				<img src="assets/img/huel.jpg" class="card-img-top cardImg" alt="...">
 				<div class="card-body">
 					<span class="row">
@@ -138,7 +139,7 @@
 				</div>
 			</div>
 
-			<div class="card col-3" style="width: 18rem;">
+			<div class="card col-12 col-md-3" style="width: 18rem;">
 				<img src="assets/img/veggieBowl.jpg" class="card-img-top cardImg" alt="...">
 				<div class="card-body">
 					<span class="row">
@@ -154,7 +155,7 @@
 				</div>
 			</div>
 
-			<div class="card col-3" style="width: 18rem;">
+			<div class="card col-12 col-md-3" style="width: 18rem;">
 				<img src="assets/img/kebabs.jpg" class="card-img-top cardImg" alt="...">
 				<div class="card-body">
 					<span class="row">
@@ -170,7 +171,7 @@
 				</div>
 			</div>
 
-			<div class="card col-3" style="width: 18rem;">
+			<div class="card col-12 col-md-3" style="width: 18rem;">
 				<img src="assets/img/teriyakiBowl.jpg" class="card-img-top cardImg" alt="...">
 				<div class="card-body">
 					<span class="row">
@@ -186,7 +187,7 @@
 				</div>
 			</div>
 
-			<div class="card col-3" style="width: 18rem;">
+			<div class="card col-12 col-md-3" style="width: 18rem;">
 				<img src="assets/img/veggieWrap.jpg" class="card-img-top cardImg" alt="...">
 				<div class="card-body">
 					<span class="row">
@@ -207,10 +208,12 @@
 	</main>
 
 	<!-- SECTION -->
-	<footer class="bg-dark text-light hidden">
-		<div class="text-center no-select">
+	<footer class="bg-dark text-light p-2 p-md-4 d-flex justify-content-around">
+		<h5 class="sticky-md-bottom text-start fs-4 fs-md-3 fontSizes">TOTAL MONIES:</h5>
+		<h5 class="sticky-md-bottom text-start fs-4 fs-md-3 fontSizes">$</h5>
+		<!-- <div class="text-center no-select">
 			<p class="mb-0"><small>Made with 💖 by CodeWorks</small></p>
-		</div>
+		</div> -->
 	</footer>
 
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

@@ -20,6 +20,9 @@ p.card-text {
 /* BASIC STYLES HERE */
 .navbar {
 	background-color: var(--bg-black);
+	justify-content: space-between !important;
+	width: 100%;
+	flex-wrap: wrap;
 }
 
 .cardImg {
@@ -32,7 +35,59 @@ p.card-text {
 	display: none;
 }
 
+.card-body {
+	background-color: var(--bg-black);
+	color: white;
+}
 
+
+footer {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	color: white;
+	text-align: center;
+
+}
+
+@media screen and (max-width: 767px) {
+	.fontSizes {
+		font-size: 15px !important;
+	}
+
+	footer {
+		padding: 0 !important;
+		height: 5rem;
+		width: 10rem;
+		flex-wrap: wrap;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.fontSizes {
+		font-size: 20px !important;
+	}
+
+	footer {
+		padding: 0 !important;
+		height: 7rem;
+		width: 15rem;
+		flex-wrap: wrap;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.fontSizes {
+		font-size: 28px !important;
+	}
+
+	footer {
+		padding: 0 !important;
+		height: 9rem;
+		width: 19rem;
+		flex-wrap: wrap;
+	}
+}
 
 
 
@@ -46,14 +101,14 @@ p.card-text {
 @import url('https://fonts.googleapis.com/css?family=Poppins:900i');
 
 .wrapper {
-	display: flex;
 	justify-content: center;
-	margin-left: 70%;
+	padding-right: 2em;
+	position: relative;
 }
 
 .cta {
 	display: flex;
-	padding: 10px 45px;
+	padding: 10px 35px;
 	text-decoration: none;
 	font-family: "Orbitron", sans-serif;
 	font-size: 30px;
@@ -63,6 +118,24 @@ p.card-text {
 	transition: 1s;
 	box-shadow: 6px 6px 0 #fcdadb;
 	transform: skewX(-15deg);
+}
+
+@media screen and (max-width: 767px) {
+	.cta {
+		display: flex;
+		padding: 5px 10px;
+		text-decoration: none;
+		font-family: "Orbitron", sans-serif;
+		font-size: 20px;
+		font-weight: bold;
+		color: white;
+		background: #fe315c;
+		transition: 1s;
+		box-shadow: 6px 6px 0 #fcdadb;
+		transform: skewX(-15deg);
+		margin-bottom: 1em;
+		align-items: center;
+	}
 }
 
 .cta:focus {
