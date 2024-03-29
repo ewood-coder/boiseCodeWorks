@@ -1,5 +1,6 @@
 import { AppState } from "../AppState.js"
 import { generateId } from "../utils/GenerateId.js"
+import { Pop } from "../utils/Pop.js"
 
 
 
@@ -13,7 +14,7 @@ export class Jumble {
 		this.name = data.name
 		this.body = data.body
 		// to best keep track of the fastest times you might want these properties too! They would start null cause no one has completed these yet.
-		this.fastestTime = null
+		this.fastestTime = Infinity
 		this.startTime = null
 		this.endTime = null
 	}
@@ -26,11 +27,17 @@ export class Jumble {
 		`
 	}
 
+	get ActiveJumblesTemplate() {
+		return `
+		
+		`
+	}
 
 
-
-
-	get JumblesTextTemplate() {
-		return `<p>${this.body}</p>`
+	get FastestTime() {
+		if (this.fastestTime == Infinity) {
+			return '⏱️ N/A'
+		}
+		return `⏱️ ${(this.fastestTime / 1000).toFixed(4)}`
 	}
 }

@@ -7,6 +7,6 @@ export const router = new Router([
 	{
 		path: '',
 		controllers: [JumblesController],
-		view: 'app/views/HomeView.html'
+		view: 'app/views/JumblesView.html'
 	}
 ])

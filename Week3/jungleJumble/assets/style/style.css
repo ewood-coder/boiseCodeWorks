@@ -21,4 +21,18 @@ body {
 	color: white;
 	border-radius: 10px;
 	border: none;
+	align-items: center;
+}
+
+.submitButton {
+	background-color: #BC87D5;
+	color: white;
+	border-radius: 10px;
+	border: none;
+	align-items: center;
+}
+
+.form-group {
+	border: solid 2.5px black;
+	border-radius: 8px;
 }
