@@ -17,11 +17,17 @@ body {
 }
 
 .startButton {
+	padding: 0;
 	background-color: #F2CF58;
 	color: white;
 	border-radius: 10px;
 	border: none;
 	align-items: center;
+	font-size: 1rem;
+}
+
+.startButton:hover {
+	background-color: #BC87D5;
 }
 
 .submitButton {

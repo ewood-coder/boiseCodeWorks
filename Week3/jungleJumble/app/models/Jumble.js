@@ -21,20 +21,24 @@ export class Jumble {
 
 	get ListTemplate() { // a basic list template to get drawing
 		return `
-			<button class="col-2 my-2 fs-5 startButton">start</button>
-			<span class="col-5 my-2">${this.name}</span>
-			<span class="col-5 my-2">⏲️ ${this.fastestTime}s</span>
+			<button class="col-2 my-2 startButton flex-wrap" onclick="app.JumblesController.setActiveJumble('${this.id}');app.JumblesController.startGame();">start</button>
+			<span class="col-5 my-2 fs-5">${this.name}</span>
+			<span class="col-5 my-2 fs-5">${this.FastestTimeTemplate}</span>
 		`
 	}
 
 	get ActiveJumblesTemplate() {
 		return `
-		
+			<span class="row justify-content-between">
+				<h4 class="col-4">${this.name}</h4>
+				<h5 class="col-8 text-end">Fastest Time: ${this.FastestTimeTemplate}s</h5>
+			</span>
+			<p>${this.body}</p>
 		`
 	}
 
 
-	get FastestTime() {
+	get FastestTimeTemplate() {
 		if (this.fastestTime == Infinity) {
 			return '⏱️ N/A'
 		}

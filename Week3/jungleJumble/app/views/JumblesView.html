@@ -1,13 +1,13 @@
 <section class="container-fluid">
 	<span class="row">
 
-		<div class="col-7">
+		<div class="col-6">
 
 			<div class="box text-center w-50">
 				<h1>Jungle Jumble</h1>
 			</div>
 
-			<div id="jumbles-body" class="box">
+			<div id="active-jumble" class="box">
 				<!-- TODO: Create box that displays the form text for creating your own jumble and includes the highest score for time -->
 				<span class="row justify-content-between">
 					<h4 class="col-4">Easy Jumble</h4>
@@ -24,7 +24,7 @@
 				<div id="jumbles-body">
 					<form onsubmit="app.JumblesController.submitJumble()">
 						<div class="form-group my-3">
-							<textarea class="form-control" id="exampleFormControlTextarea1" rows="9"
+							<textarea class="form-control" id="jumble-area" name="body" rows="9"
 								placeholder="write EXACTLY what the above text says"></textarea>
 						</div>
 						<button class="col-12 text-center justify-content-center py-2 my-1 fs-5 submitButton">submit</button>
@@ -34,7 +34,7 @@
 
 		</div>
 
-		<div class="col-5">
+		<div class="col-6">
 			<div class="box">
 				<!-- TODO: Create box w/ form that displays all created jumbles, their high scores, the start buttons, and the create jumble form itself + create button -->
 				<h4 class="text-center fs-2">Jumbles!</h4>
@@ -43,6 +43,7 @@
 				</div>
 
 				<div class="mt-3">
+					<hr />
 					<h4 class="text-center">Create Jumble</h4>
 					<hr />
 					<form>

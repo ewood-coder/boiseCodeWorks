@@ -55,5 +55,9 @@ export class JumblesController {
 		}
 	}
 
+	startGame() {
+		Pop.toast('🎮 Game Has Begun 🎮', 'success', 'top')
+	}
+
 }
 
