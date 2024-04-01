@@ -76,7 +76,7 @@ This is the repo for all my projects at Boise CodeWorks!
 			https://ewood-coder.github.io/boiseCodeWorks/Week3/vendr</a><br />
 
 <a href="https://ewood-coder.github.io/boiseCodeWorks/Week3/jungleJumble" target="_blank">
-			https://ewood-coder.github.io/boiseCodeWorks/Week3/jungleJumble</a><br />
+			https://ewood-coder.github.io/boiseCodeWorks/Week3/jungleJumble</a><br /><br />
 
 <span>
 <b>Week 3 Checkpoint:</b>
