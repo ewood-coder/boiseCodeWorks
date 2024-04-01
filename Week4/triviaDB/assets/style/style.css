@@ -1,1 +1,50 @@
 /* BASIC STYLES HERE */
+
+.hidden {
+	display: none;
+}
+
+body {
+	background-image: url(../img/bg2.png);
+	background-size: cover;
+}
+
+
+
+.navLogo {
+	height: 20%;
+	width: 20%;
+}
+
+@media screen and (max-width: 767px) {
+	.navLogo {
+		height: 50%;
+		width: 50%;
+		margin-bottom: 1rem;
+	}
+}
+
+.questionBox {
+	border: solid white;
+	background-color: rgb(196, 100, 100);
+	color: white;
+	border-radius: 15px;
+}
+
+@media screen and (min-width: 768px) {
+	.questionBox {
+		width: 75%;
+	}
+}
+
+.answerBoxes {
+	border: solid white;
+	background-color: rgb(77, 74, 142);
+	color: white;
+	padding: 1.5rem;
+	border-radius: 15px;
+}
+
+.answerBoxes:hover {
+	background-color: rgb(128, 123, 233);
+}
