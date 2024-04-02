@@ -17,6 +17,7 @@ class HousesService {
 		const response = await api.post('api/houses', houseData)
 		console.log('🏠🪓✨', response);
 		const house = new House(response.data)
+		AppState.houses.push(house)
 	}
 
 }

@@ -18,7 +18,7 @@ export class Trivia {
 
 
 	get TriviaTemplate() {
-		return /* html */ `
+		return `
 		<!-- SECTION: QUESTION BOX -->
 		<div class="d-flex justify-content-center mt-3 mt-md-3">
 			<div class="row questionBox p-2 p-md-5 mt-1 mt-md-5 mx-1 mx-0-md text-center">
