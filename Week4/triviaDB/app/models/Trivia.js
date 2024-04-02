@@ -17,8 +17,6 @@ export class Trivia {
 	}
 
 
-
-
 	get TriviaTemplate() {
 		return /* html */ `
 		<!-- SECTION: QUESTION BOX -->
