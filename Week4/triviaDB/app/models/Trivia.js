@@ -4,11 +4,15 @@ import { generateId } from "../utils/GenerateId.js"
 export class Trivia {
 
 	constructor (data) {
-		this.id = data.id
+		this.id = generateId()
 		this.question = data.question
 		this.correctAnswer = data.correct_answer
 		this.incorrectAnswers = data.incorrect_answers
 		this.allAnswers = [data.correct_answer, data.incorrect_answers[0], data.incorrect_answers[1], data.incorrect_answers[2]]
+		this.allAnswers = this.allAnswers
+			.map(answer => ({ value: answer, sort: Math.random() }))
+			.sort((a, b) => a.sort - b.sort)
+			.map(({ value }) => value)
 	}
 
 
@@ -33,11 +37,13 @@ export class Trivia {
 
 	get AnswerButtons() {
 		let buttons = ''
-		this.allAnswers.forEach(answer => buttons += `
-			<button class="answerBoxes m-4 m-md-2 m-lg-4 col-10 col-md-5 col-lg-4" onclick>
-				<h3 class="mb-1">D: ${answer}</h3>
+		this.allAnswers.forEach(answer => {
+			let isCorrectAnswer = answer == this.correctAnswer
+			buttons += `
+			<button class="answerBoxes m-4 m-md-2 m-lg-4 col-10 col-md-5 col-lg-4" onclick="app.TriviasController.selectAnswer('${this.id}', ${isCorrectAnswer})">
+				<h3 class="mb-1">${answer}</h3>
 			</button>
-		`)
+		`})
 		return buttons
 	}
 }
