@@ -9,11 +9,14 @@ export class Trivia {
 		this.correctAnswer = data.correct_answer
 		this.incorrectAnswers = data.incorrect_answers
 		this.allAnswers = [data.correct_answer, data.incorrect_answers[0], data.incorrect_answers[1], data.incorrect_answers[2]]
+		// NOTE: This randomizes all of the items in the allAnswers array above. When they are displayed on the page it is random and not the correct answer in the same spot each time.
 		this.allAnswers = this.allAnswers
 			.map(answer => ({ value: answer, sort: Math.random() }))
 			.sort((a, b) => a.sort - b.sort)
 			.map(({ value }) => value)
 	}
+
+
 
 
 	get TriviaTemplate() {
