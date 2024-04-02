@@ -1,0 +1,104 @@
+<div class="container">
+	<hr>
+	<div class="row">
+		<h2 class="text-center"><b>This is the houses page!</b></h2>
+	</div>
+	<hr>
+
+	<form id="house-form" onsubmit="app.HousesController.createHouse()" class="row bg-white p-3 rounded my-2 d-none">
+		<div class="col-12">
+			<h3 class="mb-3"><u>List your house:</u></h3>
+		</div>
+		<div class="mb-3 col-3">
+			<label for="house-year" class="text-capitalize">year</label>
+			<input type="number" id="house-year" name="year" min="1970" max="2025" required class="form-control">
+		</div>
+		<div class="mb-3 col-3">
+			<label for="house-bedrooms" class="text-capitalize">bedrooms</label>
+			<input type="number" id="house-bedrooms" name="bedrooms" min="0" max="15" required class="form-control">
+		</div>
+		<div class="mb-3 col-3">
+			<label for="house-bathrooms" class="text-capitalize">bathrooms</label>
+			<input type="number" id="house-bathrooms" name="bathrooms" min="0" max="15" required class="form-control">
+		</div>
+		<div class="mb-3 col-3">
+			<label for="house-price" class="text-capitalize">price</label>
+			<input type="number" id="house-price" name="price" min="0" required class="form-control">
+		</div>
+		<div class="mb-3 col-4">
+			<label for="house-levels" class="text-capitalize">levels</label>
+			<input type="number" id="house-levels" name="levels" min="1" required class="form-control">
+		</div>
+		<div class="mb-3 col-4">
+			<label for="house-imgUrl" class="text-capitalize">Picture of House</label>
+			<input type="url" id="house-imgUrl" name="imgUrl" min="0" placeholder="url goes here" required
+				class="form-control">
+		</div>
+		<!-- <div class="mb-3 col-4">
+			<label for="house-type" class="text-capitalize">
+				house type
+			</label>
+			<select class="form-select" name="type" id="house-type" required>
+				<option value="studioApartment">Studio Apartment</option>
+				<option value="duplex">Duplex</option>
+				<option value="triplex">Triplex</option>
+				<option value="fourplex">Fourplex</option>
+				<option value="townhouse">Townhouse</option>
+				<option value="manufactured">Manufactured Home</option>
+				<option value="mobile">Mobile Home</option>
+				<option value="multifamily">Multifamily</option>
+				<option value="other">Other/Unlisted</option>
+				<option value="unknown">🤔</option>
+			</select>
+		</div> -->
+		<div class="mb-3 col-12">
+			<label for="house-description">Description</label>
+			<textarea name="description" class="form-control" id="house-description" rows="5"></textarea>
+		</div>
+		<div class="d-flex justify-content-end">
+			<button class="btn btn-primary">Create House <i class="mdi mdi-plus-thick"></i></button>
+		</div>
+	</form>
+
+
+	<sections class="row" id="house-listings">
+
+		<!-- <div class="col-12 col-md-6 mb-3">
+			<div class="card">
+				<img class="card-img-top"
+					src="https://hips.hearstapps.com/hmg-prod/images/dsc00620-1677186777.jpg?crop=0.606xw:0.680xh;0.298xw,0.260xh&resize=640:*"
+					alt="">
+				<div class="card-body">
+					<div class="row">
+						<h3 class="card-title col-6">Year Built: 2002</h3>
+						<div class="text-secondary text-end col-6">Listed on: Jan 6th 2023</div>
+					</div>
+					<div class="card-text">
+						<p>DESCRIPTION GOES HERE</p>
+					</div>
+					<hr>
+					<div class="row justify-content-around text-center">
+						<h5 class="col normFont"><b><u>Bedrooms:</u></b>&nbsp;&nbsp;&nbsp;2</h5>
+						<h5 class="col-1 text-center"> | </h5>
+						<h5 class="col normFont"><b><u>Bathrooms:</u></b>&nbsp;&nbsp;&nbsp;2</h5>
+						<h5 class="col-1 text-center"> | </h5>
+						<h5 class="col normFont"><b><u>Levels:</u></b>&nbsp;&nbsp;&nbsp;2</h5>
+					</div>
+					<hr>
+					<div class="d-flex justify-content-between align-items-center">
+						<h2 class="fw-bold"><span class="greenTxt">$1500</span></h2>
+						<div>
+							<span class="text-secondary me-2">Charles</span>
+							<img class="profile-picture profile-picture-sm"
+								src="https://www.looper.com/img/gallery/professor-xs-entire-backstory-explained/intro-1587748942.jpg"
+								alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+
+</div>
+
+</sections>
+</div>
