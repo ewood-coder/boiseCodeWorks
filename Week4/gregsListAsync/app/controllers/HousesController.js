@@ -6,6 +6,7 @@ import { setHTML } from "../utils/Writer.js";
 
 
 export class HousesController {
+
 	constructor () {
 		console.log('🏠 🎮 loaded');
 		this.getHouses()
@@ -15,7 +16,6 @@ export class HousesController {
 		AppState.on('account', this.showHouseForm)
 		this.showHouseForm()
 	}
-
 
 
 	drawHouses() {
@@ -51,9 +51,23 @@ export class HousesController {
 			const houseData = getFormData(form)
 			console.log(houseData)
 			await housesService.createHouse(houseData)
+			form.reset()
 		} catch (error) {
 			console.error("❗", error)
 			Pop.toast("Couldn't post House", "error")
+		}
+	}
+
+	async deleteHouse(houseId) {
+		try {
+			const result = await Pop.confirm("are you sure you want to delete this house?")
+			if (result == false) return
+
+			await housesService.deleteHouse(houseId)
+		}
+		catch (error) {
+			console.error("❗", error)
+			Pop.toast("Couldn't delete House", 'error')
 		}
 	}
 

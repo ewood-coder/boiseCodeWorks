@@ -10,6 +10,7 @@ class HousesService {
 		const response = await api.get('api/houses')
 		console.log("🏠🪓", response);
 		const houses = response.data.map(house => new House(house))
+		houses.reverse()
 		AppState.houses = houses
 	}
 
@@ -18,6 +19,13 @@ class HousesService {
 		console.log('🏠🪓✨', response);
 		const house = new House(response.data)
 		AppState.houses.push(house)
+	}
+
+	async deleteHouse(houseId) {
+		const response = await api.delete(`api/houses/${houseId}`)
+		console.log("🏠🪓💥", response);
+		const indexToRemove = AppState.houses.findIndex(house => house.id == houseId)
+		AppState.houses.splice(indexToRemove, 1)
 	}
 
 }

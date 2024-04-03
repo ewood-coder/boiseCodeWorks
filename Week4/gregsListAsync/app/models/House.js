@@ -52,6 +52,7 @@ export class House {
 								alt="an image of ${this.creator.name}">
 						</div>
 					</div>
+					${this.DeleteButton}
 				</div>
 			</div>
 		</div>
@@ -60,7 +61,7 @@ export class House {
 	get DeleteButton() {
 		if (this.creatorId == AppState.account?.id) { // creatorId's are the account ids of the user that created the car. So we can compare them, to verify ownership
 			return `
-      <button onclick="app.HouseController.deleteHouse('${this.id}')" class="btn btn-danger" title="delete this house"><i class="mdi mdi-delete-forever"></i></button>
+      <button onclick="app.HousesController.deleteHouse('${this.id}')" class="btn btn-danger" title="delete this house"><i class="mdi mdi-delete-forever"></i></button>
       `
 		}
 		return ''

@@ -38,8 +38,8 @@ export class Car {
 						</div>
 						<div class="text-secondary">Listed on ${this.createdAt.toDateString()}</div>
 					</div>
+					${this.DeleteButton}
 				</div>
-				${this.DeleteButton}
 			</div>
  `
 	}
