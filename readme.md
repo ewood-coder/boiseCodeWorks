@@ -90,6 +90,9 @@ This is the repo for all my projects at Boise CodeWorks!
 <a href="https://ewood-coder.github.io/boiseCodeWorks/Week4/triviaDB" target="_blank">
 			https://ewood-coder.github.io/boiseCodeWorks/Week4/triviaDB</a><br />
 
+<a href="https://ewood-coder.github.io/boiseCodeWorks/Week4/gregsListAsync" target="_blank">
+			https://ewood-coder.github.io/boiseCodeWorks/Week4/gregsListAsync</a><br />
+
 
 
 
