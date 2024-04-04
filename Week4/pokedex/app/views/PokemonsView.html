@@ -2,7 +2,7 @@
 	<div class="row justify-content-evenly">
 
 		<!-- SECTION: POKEMON CARD -->
-		<section class="col-12 col-lg-7 col-xl-6 p-3">
+		<section class="col-12 col-lg-7 col-xl-6 p-3" id="activePokemon">
 			<div class="card-border text-center d-flex justify-content-center bgRed px-2">
 				<div class="brd-title bgWhite w-100">
 					<h4 class="my-0 py-3">Umbreon ✨</h4>
@@ -36,12 +36,13 @@
 		<section class="col-12 col-lg-5 p-3 justify-content-center d-flex">
 			<div class="bgWhite pkmList h-100 d-flex flex-column g-2">
 
-				<h5 class="text-center pt-4 mb-0 fs-3">My Pokemon:</h5>
+				<h5 class="text-center pt-4 mb-0 fs-3">Wild Pokemon:</h5>
 				<hr>
 
-				<ul class="removeListStyle py-2 px-4">
+				<ul id="wildPokemon" class="removeListStyle py-2 px-4">
 
-					<li class="fs-5 my-2"><i class="mdi mdi-pokeball fs-4"></i>&nbsp;pkm 1</li>
+					<li class="fs-5 my-2" onclick="app.wildPokemonsController.setActivePokemon('')"><i
+							class="mdi mdi-pokeball fs-4"></i>&nbsp;pkm 1</li>
 					<li class="fs-5 my-2"><i class="mdi mdi-pokeball fs-4"></i>&nbsp;pkm 2</li>
 					<li class="fs-5 my-2"><i class="mdi mdi-pokeball fs-4"></i>&nbsp;pkm 3</li>
 					<li class="fs-5 my-2"><i class="mdi mdi-pokeball fs-4"></i>&nbsp;pkm 4</li>
@@ -51,12 +52,15 @@
 					<li class="fs-5 my-2"><i class="mdi mdi-pokeball fs-4"></i>&nbsp;pkm 8</li>
 					<li class="fs-5 my-2"><i class="mdi mdi-pokeball fs-4"></i>&nbsp;pkm 9</li>
 					<li class="fs-5 my-2"><i class="mdi mdi-pokeball fs-4"></i>&nbsp;pkm 10</li>
-					<li class="fs-5 my-2"><i class="mdi mdi-pokeball fs-4"></i>&nbsp;pkm 10</li>
 
 				</ul>
 				<div class="d-flex justify-content-evenly my-3 mt-auto">
-					<button class="catch-btn py-3 py-md-2">Last</button>
-					<button class="catch-btn py-3 py-md-2">Next</button>
+					<button class="catch-btn py-3 py-md-2" onclick="app.WildPokemonsController.previousPage()">
+						Last
+					</button>
+					<button class="catch-btn py-3 py-md-2" onclick="app.WildPokemonsController.nextPage()">
+						Next
+					</button>
 				</div>
 
 			</div>
