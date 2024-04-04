@@ -58,6 +58,7 @@
 .brd-title {
 	margin: 0;
 	border: solid rgb(255, 148, 148) 6px;
+	max-width: 30rem;
 }
 
 .borderBody {
@@ -82,6 +83,12 @@
 	padding: 0 1rem 0 1rem;
 }
 
+.card-img {
+	width: 100%;
+	height: auto;
+	max-width: 30rem;
+}
+
 /* ----------------------------------------------------- */
 /**************** SECTION: POKEMON LIST ************** */
 
@@ -89,4 +96,10 @@
 	border: solid black 5px;
 	list-style-type: none;
 	border-radius: 10px;
+	max-width: 30rem;
+	width: 100%;
+}
+
+.removeListStyle {
+	list-style-type: none;
 }
