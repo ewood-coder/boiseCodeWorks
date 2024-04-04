@@ -1,11 +1,92 @@
-/* BASIC STYLES HERE */
+:root {
+	--primaryRed: #E93031;
+}
+
+/* ----------------------------------------------------- */
+/**************** SECTION: POKEMON CARD ************** */
 .profile-picture {
-  height: 200px;
-  max-width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
+	height: 200px;
+	max-width: 100%;
+	aspect-ratio: 1/1;
+	object-fit: cover;
 }
 
 .profile-picture.profile-picture-sm {
-  height: 64px;
+	height: 64px;
+}
+
+.hidden {
+	display: none;
+}
+
+.bgRed {
+	background-color: var(--primaryRed);
+}
+
+.bgWhite {
+	background-color: white;
+}
+
+.borderBtm {
+	border-bottom: solid black 5px;
+}
+
+.pkmFontNav {
+	font-family: 'Pokemon Solid', sans-serif;
+	text-shadow: black;
+}
+
+.pkmFontBody {
+	font-family: "Press Start 2P", system-ui;
+}
+
+.fixLogoSize {
+	width: 4rem;
+	height: 4rem;
+}
+
+.bodyContent {
+	background-size: cover;
+	background-image: url(../img/bgWallpaper2.png);
+}
+
+.card-border {
+	border: solid rgb(0, 0, 0) 5px;
+	border-radius: 8px;
+}
+
+.brd-title {
+	margin: 0;
+	border: solid rgb(255, 148, 148) 6px;
+}
+
+.borderBody {
+	margin: 0;
+	border: solid rgb(255, 148, 148) 8px;
+	justify-content: center;
+}
+
+.catch-btn {
+	border: solid var(--primaryRed);
+	color: var(--primaryRed);
+	background-color: white;
+	border-radius: 10px;
+	padding: 0 1rem 0 1rem;
+}
+
+.catch-btn:hover {
+	color: white;
+	background-color: var(--primaryRed);
+	border: solid var(--primaryRed);
+	border-radius: 10px;
+	padding: 0 1rem 0 1rem;
+}
+
+/* ----------------------------------------------------- */
+/**************** SECTION: POKEMON LIST ************** */
+
+.pkmList {
+	border: solid black 5px;
+	list-style-type: none;
+	border-radius: 10px;
 }
