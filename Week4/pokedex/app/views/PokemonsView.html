@@ -34,9 +34,18 @@
 
 		<!-- SECTION: POKEMON LIST -->
 		<section class="col-12 col-lg-5 p-3 justify-content-center d-flex">
-			<div class="bgWhite pkmList h-100 d-flex flex-column g-2">
+			<div class="bgWhite pkmList h-100 d-flex flex-column gap-2">
 
-				<h5 class="text-center pt-4 mb-0 fs-3">Wild Pokemon:</h5>
+				<!-- <h5 class="text-center pt-4 mb-0 fs-3">Wild Pokemon:</h5>
+				<hr> -->
+				<div class="d-flex justify-content-between gap-2 p-2 mt-3">
+					<button class="catch-btn text-center" onclick="app.WildPokemonsController.viewWildPokemon()">
+						View Wild Pokemon
+					</button>
+					<button class="catch-btn text-center" onclick="app.WildPokemonsController.viewCaughtPokemon()">
+						View Caught Pokemon
+					</button>
+				</div>
 				<hr>
 
 				<ul id="wildPokemon" class="removeListStyle py-2 px-4">
@@ -55,10 +64,11 @@
 
 				</ul>
 				<div class="d-flex justify-content-evenly my-3 mt-auto">
-					<button class="catch-btn py-3 py-md-2" onclick="app.WildPokemonsController.previousPage()">
+					<button id="lastBtn" class="catch-btn py-3 py-md-2" onclick="app.WildPokemonsController.previousPage()">
 						Last
 					</button>
-					<button class="catch-btn py-3 py-md-2" onclick="app.WildPokemonsController.nextPage()">
+
+					<button id="nextBtn" class="catch-btn py-3 py-md-2" onclick="app.WildPokemonsController.nextPage()">
 						Next
 					</button>
 				</div>

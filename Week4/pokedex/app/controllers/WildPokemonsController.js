@@ -13,6 +13,8 @@ export class WildPokemonsController {
 		this.getWildPokemons()
 		AppState.on('wildPokemon', this.drawWildPokemon)
 		AppState.on('activePokemon', this.drawActivePokemon)
+		AppState.on('wildPokemon', this.hideORshowButtons)
+		wildPokemonsService.loadMyPokemon()
 	}
 
 	async getWildPokemons() {
@@ -43,7 +45,13 @@ export class WildPokemonsController {
 	}
 
 	catchActivePokemon() {
-		wildPokemonsService.catchActivePokemon()
+		try {
+			wildPokemonsService.catchActivePokemon()
+			Pop.success("Great catch! Gotta catch em' all!")
+		}
+		catch (error) {
+			Pop.error("Error ocurred, could not catch pokemon.")
+		}
 	}
 
 	nextPage() {
@@ -52,6 +60,39 @@ export class WildPokemonsController {
 
 	previousPage() {
 		wildPokemonsService.previousPage()
+	}
+
+	hideORshowButtons() {
+		let lastBtn = document.getElementById('lastBtn')
+		if (AppState.previousURL) {
+			lastBtn.classList.remove('hidden')
+		} else {
+			lastBtn.classList.add('hidden')
+		}
+
+		let nextBtn = document.getElementById('nextBtn')
+		if (AppState.nextURL) {
+			nextBtn.classList.remove('hidden')
+		} else {
+			nextBtn.classList.add('hidden')
+		}
+	}
+
+	drawCaughtPokemon() {
+		const pokemons = AppState.myPokemon
+		let pokemonsList = ''
+		pokemons.forEach(pokemon => pokemonsList += `<li class="fs-5 my-2" 
+		onclick="app.WildPokemonsController.setActivePokemon('${pokemon.name}')">
+		<i class="mdi mdi-pokeball fs-4"></i>&nbsp;${pokemon.name}</li>`)
+		setHTML('wildPokemon', pokemonsList)
+	}
+
+	viewWildPokemon() {
+		wildPokemonsService.getWildPokemons()
+	}
+
+	viewCaughtPokemon() {
+		this.drawCaughtPokemon()
 	}
 
 }

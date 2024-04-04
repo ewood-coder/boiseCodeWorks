@@ -1,5 +1,7 @@
 import { AppState } from "../AppState.js";
+import { baseURL } from "../env.js";
 import { Pokemon } from "../models/Pokemon.js";
+import { loadState, saveState } from "../utils/Store.js";
 import { setHTML } from "../utils/Writer.js";
 import { api } from "./AxiosService.js";
 
@@ -16,9 +18,9 @@ class WildPokemonsService {
 	async getWildPokemons() {
 		const response = await axios.get(AppState.urlToCall)
 		console.log("⚾", response)
-		AppState.wildPokemon = response.data.results
 		AppState.nextURL = response.data.next
 		AppState.previousURL = response.data.previous
+		AppState.wildPokemon = response.data.results
 	}
 
 	async setActivePokemon(name) {
@@ -30,6 +32,8 @@ class WildPokemonsService {
 	catchActivePokemon() {
 		AppState.myPokemon = [...AppState.myPokemon, AppState.activePokemon]
 		console.log(AppState.myPokemon)
+		// TODO: ASK WHY THIS IS GIVING A 401 ERROR
+		api.post('api/pokemon', AppState.activePokemon)
 	}
 
 	nextPage() {
@@ -42,6 +46,11 @@ class WildPokemonsService {
 		this.getWildPokemons()
 	}
 
+	loadMyPokemon() {
+		// TODO: ASK WHY THIS IS GIVING A 401 ERROR
+		const response = api.get('api/pokemon')
+		AppState.myPokemon = response.data.map(d => new Pokemon(d))
+	}
 }
 
 export const wildPokemonsService = new WildPokemonsService()
