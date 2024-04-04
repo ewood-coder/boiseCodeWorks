@@ -11,5 +11,14 @@ export class GiftsController {
 		console.log('🎁🎮 loaded');
 	}
 
+	async getGift() {
+		try {
+			await giftsService.getGift()
+
+		} catch {
+
+		}
+	}
+
 
 }
