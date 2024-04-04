@@ -13,3 +13,80 @@
 .hidden {
 	display: none;
 }
+
+/* --------------------- */
+
+.bgGreen {
+	background-color: #37663C;
+}
+
+/* --------------------- */
+
+
+
+
+.card {
+	/* Add shadows to create the "card" effect */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	text-align: center;
+
+
+	height: 100%;
+	width: auto;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+	padding: 15px 16px;
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+/* Style the search field */
+
+form.example input[type=text] {
+	padding: 10px;
+	font-size: 17px;
+	border: 1px solid grey;
+	float: left;
+	width: 80%;
+	background: #f1f1f1;
+
+	border-radius: 10px 0 0 10px;
+}
+
+/* Style the submit button */
+form.example button {
+	float: left;
+	width: 20%;
+	padding: 10px;
+	background: #2196F3;
+	color: white;
+	font-size: 17px;
+	border: 1px solid grey;
+	border-left: none;
+	/* Prevent double borders */
+	cursor: pointer;
+
+	border-radius: 0 10px 10px 0;
+}
+
+form.example button:hover {
+	background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+	content: "";
+	clear: both;
+	display: table;
+}

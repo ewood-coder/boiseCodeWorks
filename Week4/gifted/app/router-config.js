@@ -1,6 +1,6 @@
 import { AccountController } from "./controllers/AccountController.js";
 import { GiftsController } from "./controllers/GiftsController.js";
-import { SandboxController } from "./controllers/SandboxController.js";
+import { GiphyController } from "./controllers/GiphyController.js";
 import { AuthGuard } from "./services/AuthService.js";
 import { Router } from "./utils/Router.js";
 
@@ -8,7 +8,7 @@ import { Router } from "./utils/Router.js";
 export const router = new Router([
 	{
 		path: '',
-		controllers: [GiftsController, SandboxController],
+		controllers: [GiftsController, GiphyController],
 		view: 'app/views/GiftsView.html'
 	},
 	{
