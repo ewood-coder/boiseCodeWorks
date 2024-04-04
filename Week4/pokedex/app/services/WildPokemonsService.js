@@ -47,7 +47,7 @@ class WildPokemonsService {
 	}
 
 	loadMyPokemon() {
-		// TODO: ASK WHY THIS IS GIVING A 401 ERROR
+		// TODO: ASK WHY THIS IS GIVING A 401 ERROR & BREAKING MY BUTTONS
 		const response = api.get('api/pokemon')
 		AppState.myPokemon = response.data.map(d => new Pokemon(d))
 	}

@@ -14,7 +14,9 @@ export class WildPokemonsController {
 		AppState.on('wildPokemon', this.drawWildPokemon)
 		AppState.on('activePokemon', this.drawActivePokemon)
 		AppState.on('wildPokemon', this.hideORshowButtons)
-		wildPokemonsService.loadMyPokemon()
+
+		// TODO: GET THIS WORKING SO YOU CAN SAVE STUFF TO THE SANDBOX API
+		// wildPokemonsService.loadMyPokemon()
 	}
 
 	async getWildPokemons() {
@@ -26,9 +28,32 @@ export class WildPokemonsController {
 		}
 	}
 
+	// setActivePokemon(name) {
+	// 	wildPokemonsService.setActivePokemon(name)
+
+	// 	let catchBtn = document.getElementById('catchBtn')
+	// 	if (AppState.myPokemon.find(pokemon => pokemon.name == AppState.activePokemon.name)) {
+	// 		catchBtn.classList.add('disabled')
+	// 		Pop.error("You already caught that pokemon!")
+	// 		return
+	// 	}
+	// }
+
+	// ----------------------------------------------------------------------
+	// TODO: Try and get this disable function working
 	setActivePokemon(name) {
 		wildPokemonsService.setActivePokemon(name)
+
+		let catchBtn = document.getElementById("catchBtn")
+		if (AppState.myPokemon.find(pokemon => pokemon.name == name)) {
+			catchBtn.classList.add('disabled')
+			Pop.error("You already caught that pokemon!")
+		} else {
+			catchBtn.classList.remove('disabled')
+		}
 	}
+	// ----------------------------------------------------------------------
+
 
 	drawWildPokemon() {
 		const pokemons = AppState.wildPokemon
@@ -51,6 +76,7 @@ export class WildPokemonsController {
 		}
 		catch (error) {
 			Pop.error("Error ocurred, could not catch pokemon.")
+			console.error(error)
 		}
 	}
 

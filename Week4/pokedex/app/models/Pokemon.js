@@ -9,7 +9,7 @@ export class Pokemon {
 		this.weight = data.weight
 		this.height = data.height
 		this.types = data.types.map(t => t.type.name)
-		this.picture = data.sprites.front_default
+		this.img = data.sprites.front_default
 	}
 
 	get ActivePokemonTemplate() {
@@ -21,7 +21,7 @@ export class Pokemon {
 		</div>
 
 		<div class="d-flex justify-content-center py-2">
-			<img src="${this.picture}" alt="image of active pokemon" class="card-img">
+			<img src="${this.img}" alt="image of active pokemon" class="card-img">
 		</div>
 
 		<div class="card-border bgRed px-2">
@@ -36,7 +36,7 @@ export class Pokemon {
 					<h5>Types: ${this.types.join(', ')}</h5>
 				</div>
 				<div class="col-12 col-md-6 my-0 py-2 text-center text-md-end">
-					<button class="catch-btn pb-1" onclick="app.WildPokemonsController.catchActivePokemon()">
+					<button id="catchBtn" class="catch-btn pb-1" onclick="app.WildPokemonsController.catchActivePokemon()">
 					<i class="mdi mdi-pokeball fs-4"></i>
 						&nbsp;Catch
 					</button>
