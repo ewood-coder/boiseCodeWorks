@@ -17,10 +17,6 @@ export class WildPokemonsController {
 		AppState.on('wildPokemon', this.hideORshowButtons)
 		AppState.on('account', wildPokemonsService.loadMyPokemon)
 		AppState.on('myPokemon', this.drawCaughtPokemon)
-
-		// NOTE: CHANGED LINES UNDERNEATH INTO AN EVENT LISTENER ABOVE
-		// TODO: GET THIS WORKING SO YOU CAN SAVE STUFF TO THE SANDBOX API
-		// wildPokemonsService.loadMyPokemon()
 	}
 
 	async getWildPokemons() {
@@ -32,12 +28,10 @@ export class WildPokemonsController {
 		}
 	}
 
-	// ----------------------------------------------------------------------
-	// TODO: Try and get this disable function working
+
 	setActivePokemon(name, caught) {
 		wildPokemonsService.setActivePokemon(name, caught)
 	}
-	// ----------------------------------------------------------------------
 
 	releasePokemon() {
 		wildPokemonsService.releasePokemon()

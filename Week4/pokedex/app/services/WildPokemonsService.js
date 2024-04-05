@@ -44,7 +44,6 @@ class WildPokemonsService {
 	catchActivePokemon() {
 		AppState.myPokemon = [...AppState.myPokemon, AppState.activePokemon]
 		console.log(AppState.myPokemon)
-		// TODO: ASK WHY THIS IS GIVING A 401 ERROR
 		api.post('api/pokemon', AppState.activePokemon)
 	}
 
@@ -59,7 +58,6 @@ class WildPokemonsService {
 	}
 
 	async loadMyPokemon() {
-		// TODO: ASK WHY THIS IS GIVING A 401 ERROR & BREAKING MY BUTTONS
 		const response = await api.get('api/pokemon')
 		AppState.myPokemon = response.data.map(d => new Pokemon(d, true))
 	}
