@@ -1,5 +1,6 @@
 import { AppState } from "../AppState.js";
 import { giftsService } from "../services/GiftsService.js";
+import { getFormData } from "../utils/FormHandler.js";
 import { Pop } from "../utils/Pop.js";
 import { setHTML } from "../utils/Writer.js";
 
@@ -11,7 +12,6 @@ export class GiftsController {
 		console.log('🎁🎮 loaded');
 		AppState.on('account', this.getGifts)
 		AppState.on('gifts', this.drawGifts)
-
 	}
 
 	async getGifts() {
@@ -23,7 +23,7 @@ export class GiftsController {
 		}
 	}
 
-	async drawGifts() {
+	drawGifts() {
 		let html = ''
 
 		const gifts = AppState.gifts
@@ -33,5 +33,15 @@ export class GiftsController {
 		setHTML("gifts", html)
 	}
 
+	openGift(id) {
+		giftsService.openGift(id)
+	}
+
+	createGift() {
+		event.preventDefault()
+		const form = event.target
+		const formData = getFormData(form)
+		giftsService.createGift(formData)
+	}
 
 }

@@ -17,7 +17,11 @@ export const giphyApi = axios.create({
 
 class GiphyService {
 
-
+	async searchGif(formData) {
+		const response = await giphyApi.get(`/search?q=${formData.search}`)
+		console.log(response.data)
+		return response.data.data
+	}
 }
 
 export const giphyService = new GiphyService()
