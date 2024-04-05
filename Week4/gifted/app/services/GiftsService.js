@@ -12,8 +12,9 @@ const giftApi = axios.create({
 
 
 class GiftsService {
-
-
+	async getGift() {
+		// const response = await api
+	}
 }
 
 export const giftsService = new GiftsService()

@@ -14,9 +14,10 @@ export class GiftsController {
 	async getGift() {
 		try {
 			await giftsService.getGift()
-
-		} catch {
-
+		}
+		catch (error) {
+			Pop.error("Could not get GIFT, failure to open")
+			console.error(error)
 		}
 	}
 
