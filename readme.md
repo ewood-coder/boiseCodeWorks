@@ -105,6 +105,8 @@ This is the repo for all my projects at Boise CodeWorks!
 			https://ewood-coder.github.io/inspireCP4/</a><br /><br />
 </span>
 
+<hr />
+
 
 
 </div>
