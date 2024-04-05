@@ -7,6 +7,10 @@ import { api } from "./AxiosService.js";
 
 class SandboxPokemonsService {
 
+	releasePokemon() {
+
+	}
+
 
 }
 

@@ -15,6 +15,13 @@ export const pokeApi = new axios.create({
 
 class WildPokemonsService {
 
+	async releasePokemon() {
+		const response = await api.delete('api/pokemon/' + AppState.activePokemon.id)
+		console.log(response.data)
+		AppState.myPokemon = AppState.myPokemon.filter(p => p.id != AppState.activePokemon.id)
+		AppState.activePokemon = null
+	}
+
 	async getWildPokemons() {
 		const response = await axios.get(AppState.urlToCall)
 		console.log("⚾", response)
@@ -23,7 +30,12 @@ class WildPokemonsService {
 		AppState.wildPokemon = response.data.results
 	}
 
-	async setActivePokemon(name) {
+	async setActivePokemon(name, caught) {
+		if (caught) {
+			let found = AppState.myPokemon.find(pokemon => pokemon.name == name)
+			AppState.activePokemon = found
+			return
+		}
 		const response = await pokeApi.get(`/${name}`)
 		console.log(response.data)
 		AppState.activePokemon = new Pokemon(response.data)
@@ -46,10 +58,10 @@ class WildPokemonsService {
 		this.getWildPokemons()
 	}
 
-	loadMyPokemon() {
+	async loadMyPokemon() {
 		// TODO: ASK WHY THIS IS GIVING A 401 ERROR & BREAKING MY BUTTONS
-		const response = api.get('api/pokemon')
-		AppState.myPokemon = response.data.map(d => new Pokemon(d))
+		const response = await api.get('api/pokemon')
+		AppState.myPokemon = response.data.map(d => new Pokemon(d, true))
 	}
 }
 

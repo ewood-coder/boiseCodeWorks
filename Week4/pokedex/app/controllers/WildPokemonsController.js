@@ -1,5 +1,6 @@
 import { AppState } from "../AppState.js";
 import { Pokemon } from "../models/Pokemon.js";
+import { sandboxPokemonsService } from "../services/SandboxPokemonsService.js";
 import { wildPokemonsService } from "../services/WildPokemonsService.js";
 import { Pop } from "../utils/Pop.js";
 import { setHTML } from "../utils/Writer.js";
@@ -15,6 +16,7 @@ export class WildPokemonsController {
 		AppState.on('activePokemon', this.drawActivePokemon)
 		AppState.on('wildPokemon', this.hideORshowButtons)
 		AppState.on('account', wildPokemonsService.loadMyPokemon)
+		AppState.on('myPokemon', this.drawCaughtPokemon)
 
 		// NOTE: CHANGED LINES UNDERNEATH INTO AN EVENT LISTENER ABOVE
 		// TODO: GET THIS WORKING SO YOU CAN SAVE STUFF TO THE SANDBOX API
@@ -32,20 +34,14 @@ export class WildPokemonsController {
 
 	// ----------------------------------------------------------------------
 	// TODO: Try and get this disable function working
-	setActivePokemon(name) {
-		wildPokemonsService.setActivePokemon(name)
-
-		// let catchBtn = document.getElementById("catchBtn")
-		// if (AppState.myPokemon.find(pokemon => pokemon.name == name)) {
-		// 	catchBtn.classList.add('disabled')
-		// 	Pop.error("You already caught that pokemon!")
-		// 	return
-		// } else {
-		// 	catchBtn.classList.remove('disabled')
-		// }
+	setActivePokemon(name, caught) {
+		wildPokemonsService.setActivePokemon(name, caught)
 	}
 	// ----------------------------------------------------------------------
 
+	releasePokemon() {
+		wildPokemonsService.releasePokemon()
+	}
 
 	drawWildPokemon() {
 		const pokemons = AppState.wildPokemon
@@ -58,7 +54,7 @@ export class WildPokemonsController {
 
 	drawActivePokemon() {
 		const activePokemon = AppState.activePokemon
-		setHTML('activePokemon', activePokemon.ActivePokemonTemplate)
+		setHTML('activePokemon', activePokemon?.ActivePokemonTemplate ?? 'no pokemon selected')
 	}
 
 	catchActivePokemon() {
@@ -100,7 +96,7 @@ export class WildPokemonsController {
 		const pokemons = AppState.myPokemon
 		let pokemonsList = ''
 		pokemons.forEach(pokemon => pokemonsList += `<li class="fs-5 my-2" 
-		onclick="app.WildPokemonsController.setActivePokemon('${pokemon.name}')">
+		onclick="app.WildPokemonsController.setActivePokemon('${pokemon.name}', true)">
 		<i class="mdi mdi-pokeball fs-4"></i>&nbsp;${pokemon.name}</li>`)
 		setHTML('wildPokemon', pokemonsList)
 	}
