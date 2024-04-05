@@ -18,6 +18,20 @@
 
 .bgGreen {
 	background-color: #37663C;
+	padding: 10px;
+}
+
+.bgBlue {
+	background-color: #2196F3;
+	border-radius: 10px;
+	border: solid #2196F3 3px;
+	padding: 5px 10px;
+	color: white;
+}
+
+.bgBlue:hover {
+	background-color: white;
+	color: #2196F3;
 }
 
 /* --------------------- */
@@ -32,8 +46,8 @@
 	text-align: center;
 
 
-	height: 100%;
-	width: auto;
+	height: auto;
+	width: 17%;
 }
 
 /* On mouse-over, add a deeper shadow */
