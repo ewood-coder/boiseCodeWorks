@@ -13,7 +13,7 @@ export class Gift {
 
 
 	get GiftTemplate() {
-		return /*html*/`
+		return `
 		<div class="card col-3 m-3" onclick="">
 			<img class="p-4" src="${this.url}" alt="image of giftbox">
 			<div class="container">

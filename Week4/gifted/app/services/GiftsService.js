@@ -4,16 +4,15 @@ import { api } from "./AxiosService.js"
 import { Gift } from "../models/Gift.js";
 
 
-// @ts-ignore
-const giftApi = axios.create({
-	baseURL: 'https://sandbox.codeworksacademy.com/api/gifts',
-	timeout: 4000,
-})
 
 
 class GiftsService {
-	async getGift() {
-		// const response = await api
+
+	async getGifts() {
+		const response = await api.get('api/gifts')
+		console.log('🎁🛰️', response.data);
+		const gifts = response.data.map(gift => new Gift(gift))
+		AppState.gifts = gifts
 	}
 }
 
