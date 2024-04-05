@@ -99,7 +99,11 @@ This is the repo for all my projects at Boise CodeWorks!
 <a href="https://ewood-coder.github.io/boiseCodeWorks/Week4/gifted" target="_blank">
 			https://ewood-coder.github.io/boiseCodeWorks/Week4/gifted</a><br />
 
-
+<span>
+<b>Week 4 Checkpoint:</b>
+<a href="https://ewood-coder.github.io/inspireCP4/" target="_blank">
+			https://ewood-coder.github.io/inspireCP4/</a><br /><br />
+</span>
 
 
 
