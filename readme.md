@@ -108,7 +108,7 @@ This is the repo for all my projects at Boise CodeWorks!
 <hr />
 
 <h3 style="text-align:center;"><u>Week 5</u></h3>
-<h5><u>Working with MogoDB:</u></h5>
+<h5><u>Working with MongoDB:</u></h5>
 <a href="https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week5/burgershack" target="_blank">
 			https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week5/burgershack</a><br />
 
