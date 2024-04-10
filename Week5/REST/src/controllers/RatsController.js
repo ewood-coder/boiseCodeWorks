@@ -10,7 +10,8 @@ export class RatsController extends BaseController {
 	constructor () {
 		super('api/rats')
 		this.router
-			.get("", this.getRats)
+			.get('', this.getRats)
+			.get('/:ratId/missions', this.getRatsMission)
 	}
 
 
@@ -24,4 +25,16 @@ export class RatsController extends BaseController {
 			next(error)
 		}
 	}
+
+	async getRatsMission(request, response, next) {
+		try {
+			const ratId = request.params.ratId
+			const missions = await missionsService.getRatsMission(ratId)
+			response.send(missions)
+		}
+		catch (error) {
+			next(error)
+		}
+	}
+
 }

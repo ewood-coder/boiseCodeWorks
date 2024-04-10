@@ -1,5 +1,8 @@
 import { request } from "express"
 import { dbContext } from "../db/DbContext.js"
+import { LocationSchema } from "../models/Location.js"
+
+
 
 class LocationsService {
 

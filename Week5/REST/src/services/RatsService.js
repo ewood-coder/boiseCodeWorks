@@ -1,5 +1,8 @@
 import { request } from "express"
 import { dbContext } from "../db/DbContext.js"
+import { RatSchema } from "../models/Rat.js"
+
+
 
 class RatsService {
 
