@@ -118,6 +118,9 @@ This is the repo for all my projects at Boise CodeWorks!
 <a href="https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week5/REST" target="_blank">
 			https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week5/REST</a><br />
 
+<a href="https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week5/bugLog" target="_blank">
+			https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week5/bugLog</a><br />
+
 
 
 </div>
