@@ -10,9 +10,23 @@ export class NotesController extends BaseController {
 	constructor () {
 		super('api/notes')
 		this.router
+			.get('', this.getNotes)
+			.get('/:noteId', this.getNoteById)
 			.use(Auth0Provider.getAuthorizedUserInfo)
 			.post('', this.createNote)
 			.delete('/:noteId', this.destroyNote)
+	}
+
+
+	async getNotes(request, response, next) {
+		try {
+			const searchQuery = request.query
+			const notes = await notesService.getNotes(searchQuery)
+			response.send(notes)
+		}
+		catch (error) {
+			next(error)
+		}
 	}
 
 
@@ -22,6 +36,17 @@ export class NotesController extends BaseController {
 			const userInfo = request.userInfo
 			noteData.creatorId = userInfo.id
 			const note = await notesService.createNote(noteData)
+			response.send(note)
+		}
+		catch (error) {
+			next(error)
+		}
+	}
+
+	async getNoteById(request, response, next) {
+		try {
+			const noteId = request.params.noteId
+			const note = await notesService.getNoteById(noteId)
 			response.send(note)
 		}
 		catch (error) {

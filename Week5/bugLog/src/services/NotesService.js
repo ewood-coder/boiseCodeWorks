@@ -7,6 +7,18 @@ import { Forbidden } from "../utils/Errors.js"
 
 class NotesService {
 
+	async getNotes(noteData) {
+		const notes = await dbContext.Notes.find(noteData)
+		return notes
+	}
+
+	async getNoteById(noteId) {
+		const note = await dbContext.Notes.findById(noteId)
+		await note.populate('creator')
+		if (!note) throw new Error(`No note with ID: ${noteId}`)
+		return note
+	}
+
 	async createNote(noteData) {
 		const note = await dbContext.Notes.create(noteData)
 		await note.populate('creator')
@@ -20,12 +32,12 @@ class NotesService {
 	}
 
 	async destroyNote(noteId, userId) {
-		const noteToDestroy = await this.destroyNote(noteId)
+		const noteToDestroy = await this.getNoteById(noteId)
 
 		if (noteToDestroy.creatorId != userId) throw new Forbidden("That NOTE doesn't belong to you!")
 
 		await noteToDestroy.deleteOne()
-		return `${noteToDestroy.description} was removed`
+		return `${noteToDestroy.body} was removed`
 	}
 
 }

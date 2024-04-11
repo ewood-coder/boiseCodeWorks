@@ -9,20 +9,22 @@ export class TrackedBugsController extends BaseController {
 	constructor () {
 		super('api/trackedBugs')
 		this.router
-		// .get('', this.getRats)
-		// .get('/:ratId/missions', this.getRatsMission)
+			.use(Auth0Provider.getAuthorizedUserInfo)
+			.post('', this.createTrackedBug)
+
 	}
 
 
-	// async getRats(request, response, next) {
-	// 	try {
-	// 		const searchQuery = request.query // why not just enable query searching here?
-	// 		const rats = await ratsService.getRats(searchQuery)
-	// 		response.send(rats)
-	// 	}
-	// 	catch (error) {
-	// 		next(error)
-	// 	}
-	// }
-
+	async createTrackedBug(request, response, next) {
+		try {
+			const trackedBugData = request.body
+			const userInfo = request.userInfo
+			trackedBugData.creatorId = userInfo.id
+			const trackedBug = await trackedBugsService.createTrackedBug(trackedBugData)
+			response.send(trackedBug)
+		}
+		catch (error) {
+			next(error)
+		}
+	}
 }
