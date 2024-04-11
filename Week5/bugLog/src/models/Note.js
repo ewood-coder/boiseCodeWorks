@@ -7,7 +7,7 @@ export const NoteSchema = new Schema({
 	bugId: { type: Schema.ObjectId, required: true, ref: 'Bug' },
 	creatorId: { type: Schema.ObjectId, required: true, ref: 'Account' }
 
-}, { toJSON: { virtuals: true } })
+}, { timestamps: true, toJSON: { virtuals: true } })
 
 
 NoteSchema.virtual('creator', {
