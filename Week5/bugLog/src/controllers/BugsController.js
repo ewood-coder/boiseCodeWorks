@@ -10,20 +10,34 @@ export class BugsController extends BaseController {
 	constructor () {
 		super('api/bugs')
 		this.router
-		// .get('', this.getRats)
+			.get('', this.getBugs)
+			.use(Auth0Provider.getAuthorizedUserInfo)
+			.post('', this.createBug)
 		// .get('/:ratId/missions', this.getRatsMission)
 	}
 
 
-	// async getRats(request, response, next) {
-	// 	try {
-	// 		const searchQuery = request.query // why not just enable query searching here?
-	// 		const rats = await ratsService.getRats(searchQuery)
-	// 		response.send(rats)
-	// 	}
-	// 	catch (error) {
-	// 		next(error)
-	// 	}
-	// }
+	async getBugs(request, response, next) {
+		try {
+			const searchQuery = request.query
+			const bugs = await bugsService.getBugs(searchQuery)
+			response.send(bugs)
+		}
+		catch (error) {
+			next(error)
+		}
+	}
+
+
+	async createBug(request, response, next) {
+		try {
+			const bugData = request.body
+			const bug = await bugsService.createBug(bugData)
+			response.send(bug)
+		}
+		catch (error) {
+			next(error)
+		}
+	}
 
 }
