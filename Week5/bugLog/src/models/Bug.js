@@ -7,10 +7,10 @@ export const BugSchema = new Schema({
 	description: { type: String, minLength: 10, maxLength: 500, required: true },
 	priority: { type: Number, minLength: 1, maxLength: 5, required: true },
 	closed: { type: Boolean, required: true, default: false },
-	closedDate: { type: Date, required: true },
+	closedDate: { type: Date },
 	creatorId: { type: Schema.ObjectId, required: true, ref: 'Account' }
 
-}, { toJSON: { virtuals: true } })
+}, { timestamps: true, toJSON: { virtuals: true } })
 
 
 BugSchema.virtual('creator', {

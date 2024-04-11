@@ -7,13 +7,14 @@ import { BugSchema } from "../models/Bug.js"
 class BugsService {
 
 
-	async getBugs(searchQuery) {
-		const bugs = await dbContext.Bugs.find(searchQuery)
+	async getBugs(bugData) {
+		const bugs = await dbContext.Bugs.find(bugData)
 		return bugs
 	}
 
-	createBug(bugData) {
+	async createBug(bugData) {
 		const bug = await dbContext.Bugs.create(bugData)
+		await bug.populate('creator')
 		return bug
 	}
 
