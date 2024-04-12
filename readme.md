@@ -121,6 +121,10 @@ This is the repo for all my projects at Boise CodeWorks!
 <a href="https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week5/bugLog" target="_blank">
 			https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week5/bugLog</a><br />
 
+<span>
+<b>Week 5 Checkpoint:</b>
+<p>NO CHECKPOINT THIS WEEK</p><br /><br />
+</span>
 
 
 </div>
