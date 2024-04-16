@@ -4,7 +4,6 @@ import { loadState, saveState } from '../utils/Store.js';
 import Login from './Login.vue';
 
 const theme = ref(loadState('theme') || 'light')
-const nav = ref(navbarColor)
 
 onMounted(() => {
 	document.documentElement.setAttribute('data-bs-theme', theme.value)
@@ -16,13 +15,6 @@ function toggleTheme() {
 	saveState('theme', theme.value)
 }
 
-function navbarColor() {
-	const nav = document.createElement("nav");
-	if (theme.value == 'dark') {
-		nav.classList.remove('borderBtm')
-		nav.classList.add('borderBtm2')
-	}
-}
 
 </script>
 
@@ -46,7 +38,7 @@ function navbarColor() {
 				</li>
 			</ul> -->
 			<!-- LOGIN COMPONENT HERE -->
-			<div class="ms-auto">
+			<div class="ms-auto text-end">
 				<button class="btn text-dark fs-3 btn-success p-1 py-0 me-4" @click="toggleTheme"
 					:title="`Enable ${theme == 'light' ? 'dark' : 'light'} theme.`">
 					<i class="mdi" :class="theme == 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'"></i>
