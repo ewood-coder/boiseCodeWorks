@@ -25,110 +25,78 @@ a {
 // ----------------------------------------------------------
 // ---- CSS BROUGHT FROM PREVIOUS VERSION OF MoonMiners ----
 
-:root {
-	--brightYellow: #fec940;
-	--darkYellow: #f5b308;
-	--accentYellow: #fe9814;
-	--duration: 5;
-}
+// :root {
+// 	--brightYellow: #fec940;
+// 	--darkYellow: #f5b308;
+// 	--accentYellow: #fe9814;
+// 	--duration: 5;
+// }
 
-body {
-	background-image: url(../img/space2.png);
-	background-size: cover;
-	font-family: "Black Han Sans", sans-serif;
-	overscroll-behavior: none;
-}
+// body {
+// 	background-image: url(../img/space2.png);
+// 	background-size: cover;
+// 	font-family: "Black Han Sans", sans-serif;
+// 	overscroll-behavior: none;
+// }
 
-.title {
-	font-size: 6em !important;
-	font-family: "Honk", system-ui;
-}
+// .title {
+// 	font-size: 6em !important;
+// 	font-family: "Honk", system-ui;
+// }
 
-.brightYellow {
-	background-color: var(--brightYellow);
-	/* border: solid; */
-	border-radius: 25px;
-}
+// .brightYellow {
+// 	background-color: var(--brightYellow);
+// 	/* border: solid; */
+// 	border-radius: 25px;
+// }
 
-.darkYellow {
-	background-color: var(--darkYellow);
-	/* border: solid; */
-	border-radius: 25px;
-}
+// .darkYellow {
+// 	background-color: var(--darkYellow);
+// 	/* border: solid; */
+// 	border-radius: 25px;
+// }
 
-.accentYellow {
-	background-color: var(--accentYellow);
-	/* border: solid; */
-	height: 61px;
-	margin-top: 41px;
-}
+// .accentYellow {
+// 	background-color: var(--accentYellow);
+// 	/* border: solid; */
+// 	height: 61px;
+// 	margin-top: 41px;
+// }
 
-.rcLeft {
-	border-radius: 25px 0 0 0;
-}
+// .rcLeft {
+// 	border-radius: 25px 0 0 0;
+// }
 
-.rcCenter {
-	border-radius: 25px 25px 0 0;
-}
+// .rcCenter {
+// 	border-radius: 25px 25px 0 0;
+// }
 
-.rcRight {
-	border-radius: 0 25px 0 0;
-}
-
-
-
-.fs-6 {
-	font-size: 1.8em !important;
-}
-
-.fs-7 {
-	font-size: 4em !important;
-}
-
-.newFont {
-	font-family: "Overpass", sans-serif;
-	text-transform: capitalize;
-}
-
-.borderBox {
-	border: solid;
-	border-color: white;
-	padding: 5px 10px;
-	border-radius: 5px;
-	width: auto;
-}
+// .rcRight {
+// 	border-radius: 0 25px 0 0;
+// }
 
 
 
+// .fs-6 {
+// 	font-size: 1.8em !important;
+// }
 
+// .fs-7 {
+// 	font-size: 4em !important;
+// }
 
+// .newFont {
+// 	font-family: "Overpass", sans-serif;
+// 	text-transform: capitalize;
+// }
 
-
-
-
-
-.sunkenBox {
-	border-radius: 25px;
-	transition: all ease 0.2s;
-}
-
-.box {
-	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-}
-
-/* .box:hover {
-	transform: translateY(-5px);
-	box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
-} */
-
-.box2 {
-	box-shadow: inset 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
-}
-
-/* .box2:hover {
-	transform: translateY(5px);
-	box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
-} */
+// .borderBox {
+// 	border: solid;
+// 	border-color: white;
+// 	padding: 5px 10px;
+// 	border-radius: 5px;
+// 	width: auto;
+// }
 
 
 
@@ -138,93 +106,125 @@ body {
 
 
 
-.round-time-bar div {
-	height: 5px;
-	animation: roundtime calc(var(--duration) * 1s) steps(var(--duration)) forwards;
-	transform-origin: left center;
-	background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255));
-	background-color: rgb(200, 200, 200);
-}
 
-@keyframes roundtime {
-	to {
-		/* More performant than animating `width` */
-		transform: scaleX(0);
-	}
-}
+// .sunkenBox {
+// 	border-radius: 25px;
+// 	transition: all ease 0.2s;
+// }
 
-.round-time-bar[data-style="smooth"] div {
-	animation: roundtime calc(var(--duration) * 1s) linear forwards;
-}
+// .box {
+// 	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+// }
 
+// /* .box:hover {
+// 	transform: translateY(-5px);
+// 	box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+// } */
 
-.btn3d {
-	position: relative;
-	top: -6px;
-	border: 0;
-	transition: all 40ms linear;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	margin-left: 2px;
-	margin-right: 2px;
-}
+// .box2 {
+// 	box-shadow: inset 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
+// }
 
-.btn3d:active:focus,
-.btn3d:focus:hover,
-.btn3d:focus {
-	-moz-outline-style: none;
-	outline: medium none;
-}
-
-.btn3d:active,
-.btn3d.active {
-	top: 2px;
-}
-
-.btn3d.btn-primary {
-	box-shadow: 0 0 0 1px #417fbd inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #4D5BBE, 0 8px 8px 1px rgba(0, 0, 0, 0.5);
-	background-color: #4274D7;
-}
-
-.btn3d.btn-primary:active,
-.btn3d.btn-primary.active {
-	box-shadow: 0 0 0 1px #417fbd inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
-	background-color: #4274D7;
-}
-
-.btn3d.btn-danger {
-	box-shadow: 0 0 0 1px #b93802 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #AA0000, 0 8px 8px 1px rgba(0, 0, 0, 0.5);
-	background-color: #D73814;
-}
-
-.btn3d.btn-danger:active,
-.btn3d.btn-danger.active {
-	box-shadow: 0 0 0 1px #b93802 inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
-	background-color: #D73814;
-}
+// /* .box2:hover {
+// 	transform: translateY(5px);
+// 	box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+// } */
 
 
-/* ONCLICK FOR IMAGE ANIMATION */
 
-#evilMoon {
-	border: 0;
-	/* outline: @ border; */
-	padding: 1.5rem 2rem;
-	font-size: 4rem;
-	font-family: monospace;
-	// box-shadow: 0px 5px 10px rgba(darken(dodgerblue, 40%));
-	transition: all .3s;
-	cursor: pointer;
-	border-radius: 5px;
-	// border-bottom: 4px solid lighten(gray, 70%); Idk why this was on here, probably something to do with box shadows
-}
 
-#evilMoon:hover {
-	// box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%));
-	transform: scale(1.03);
-}
 
-#evilMoon:active {
-	// box-shadow: 0px 4px 8px rgba(darken(dodgerblue, 30%));
-	transform: scale(.98);
-}
+
+
+
+
+// .round-time-bar div {
+// 	height: 5px;
+// 	animation: roundtime calc(var(--duration) * 1s) steps(var(--duration)) forwards;
+// 	transform-origin: left center;
+// 	background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255));
+// 	background-color: rgb(200, 200, 200);
+// }
+
+// @keyframes roundtime {
+// 	to {
+// 		/* More performant than animating `width` */
+// 		transform: scaleX(0);
+// 	}
+// }
+
+// .round-time-bar[data-style="smooth"] div {
+// 	animation: roundtime calc(var(--duration) * 1s) linear forwards;
+// }
+
+
+// .btn3d {
+// 	position: relative;
+// 	top: -6px;
+// 	border: 0;
+// 	transition: all 40ms linear;
+// 	margin-top: 10px;
+// 	margin-bottom: 10px;
+// 	margin-left: 2px;
+// 	margin-right: 2px;
+// }
+
+// .btn3d:active:focus,
+// .btn3d:focus:hover,
+// .btn3d:focus {
+// 	-moz-outline-style: none;
+// 	outline: medium none;
+// }
+
+// .btn3d:active,
+// .btn3d.active {
+// 	top: 2px;
+// }
+
+// .btn3d.btn-primary {
+// 	box-shadow: 0 0 0 1px #417fbd inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #4D5BBE, 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+// 	background-color: #4274D7;
+// }
+
+// .btn3d.btn-primary:active,
+// .btn3d.btn-primary.active {
+// 	box-shadow: 0 0 0 1px #417fbd inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+// 	background-color: #4274D7;
+// }
+
+// .btn3d.btn-danger {
+// 	box-shadow: 0 0 0 1px #b93802 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #AA0000, 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+// 	background-color: #D73814;
+// }
+
+// .btn3d.btn-danger:active,
+// .btn3d.btn-danger.active {
+// 	box-shadow: 0 0 0 1px #b93802 inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+// 	background-color: #D73814;
+// }
+
+
+// /* ONCLICK FOR IMAGE ANIMATION */
+
+// #evilMoon {
+// 	border: 0;
+// 	/* outline: @ border; */
+// 	padding: 1.5rem 2rem;
+// 	font-size: 4rem;
+// 	font-family: monospace;
+// 	// box-shadow: 0px 5px 10px rgba(darken(dodgerblue, 40%));
+// 	transition: all .3s;
+// 	cursor: pointer;
+// 	border-radius: 5px;
+// 	// border-bottom: 4px solid lighten(gray, 70%); Idk why this was on here, probably something to do with box shadows
+// }
+
+// #evilMoon:hover {
+// 	// box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%));
+// 	transform: scale(1.03);
+// }
+
+// #evilMoon:active {
+// 	// box-shadow: 0px 4px 8px rgba(darken(dodgerblue, 30%));
+// 	transform: scale(.98);
+// }

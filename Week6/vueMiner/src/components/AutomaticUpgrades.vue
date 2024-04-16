@@ -1,10 +1,25 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
 import { AppState } from '../AppState.js'
 import { gameService } from '../services/GameService.js';
 
 
-//TODO: ADD JS SCRIPTS
+const automaticUpgrades = computed(() => AppState.automaticUpgrades)
+
+function buyAutomaticUpgrade(name) {
+	gameService.buyAutomaticUpgrade(name)
+}
+
+function collectAutoUpgrades() {
+	gameService.collectAutoUpgrades()
+}
+
+let intervalId = undefined
+onMounted(() => { // this will run when ever this component gets loaded into the page
+	if (intervalId) clearInterval(intervalId)
+	intervalId = setInterval(collectAutoUpgrades, 3000)
+})
+
 </script>
 
 
@@ -12,29 +27,17 @@ import { gameService } from '../services/GameService.js';
 
 	<h5>AUTOMATIC UPGRADES</h5>
 	<span id="autoButtons">
-		<span class="d-flex align-items-center">
+		<span class="d-flex align-items-center" v-for="upgrade in automaticUpgrades" :key="upgrade.name">
 			<button id="mousetronaut-btn" type="button" class="btn btn-danger btn3d fs-4 d-flex my-3 px-5 text-center"
-				onclick="buyAutomaticUpgrade('mousetronaut')">
-				&nbsp;&nbsp;1k&nbsp;
+				@click="buyAutomaticUpgrade(upgrade.name)">
+				&nbsp;&nbsp;{{ upgrade.price }}&nbsp;
 				<i class="mdi mdi-triforce"></i>
 			</button>
-			<h5 class="ms-3 newFont">
-				Mousetronauts<br />
-				+10 / 3s
+			<h5 class="ms-3 newFont txtTransform">
+				{{ upgrade.name }}<br />
+				+{{ upgrade.multiplier }} / 3s
 			</h5>
 		</span>
-	</span>
-
-	<span class="d-flex align-items-center">
-		<button id="space-station-btn" type="button" class="btn btn-danger btn3d fs-4 d-flex my-3 px-5 text-center"
-			onclick="buyAutomaticUpgrade('space-station')">
-			50k&nbsp;
-			<i class="mdi mdi-triforce"></i>
-		</button>
-		<h5 class="ms-3 newFont">
-			Space Station<br />
-			+100 / 3s
-		</h5>
 	</span>
 
 </template>

@@ -3,8 +3,22 @@ import { computed } from 'vue'
 import { gameService } from '../services/GameService.js';
 import { AppState } from '../AppState.js';
 
+
 const triforce = computed(() => AppState.triforce)
-//TODO: ADD JS SCRIPTS
+
+const clickWorth = computed(() => {
+	return AppState.clickUpgrades.reduce(
+		(accumulator, upgrade) => accumulator + (upgrade.multiplier * upgrade.quantity),
+		1
+	);
+})
+
+const autoUpgradeWorth = computed(() => {
+	return AppState.automaticUpgrades.reduce(
+		(accumulator, upgrade) => accumulator + (upgrade.multiplier * upgrade.quantity),
+		0
+	);
+})
 </script>
 
 
@@ -12,7 +26,7 @@ const triforce = computed(() => AppState.triforce)
 
 	<div id="topBoxes" class="row justify-content-center">
 		<div class="accentYellow rcLeft col-2 d-flex justify-content-between">
-			<p id="clickCollectorCount" class="fs-3 pt-3">+1</p>
+			<p id="clickCollectorCount" class="fs-3 pt-3">+{{ clickWorth }}</p>
 			<i class="mdi mdi-gesture-tap fs-1"></i>
 		</div>
 		<div class="brightYellow rcCenter col-3 d-flex justify-content-between">
@@ -25,16 +39,14 @@ const triforce = computed(() => AppState.triforce)
 						<div class="fs-3"></div>
 					</div> -->
 			<i class="mdi mdi-timer-outline fs-1"></i>
-			<p id="autoCollectorCount" class="fs-3 pt-3">+0</p>
+			<p id="autoCollectorCount" class="fs-3 pt-3">+{{ autoUpgradeWorth }}</p>
 		</div>
 	</div>
 
 </template>
 
 
-<style lang="scss">
-@import "../src/assets/scss/main.scss";
-
+<style lang="scss" scoped>
 .rcLeft {
 	border-radius: 25px 0 0 0;
 }

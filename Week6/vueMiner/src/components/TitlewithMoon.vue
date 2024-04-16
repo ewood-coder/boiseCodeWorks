@@ -28,9 +28,7 @@ function mine() {
 </template>
 
 
-<style lang="scss">
-@import "../src/assets/scss/main.scss";
-
+<style lang="scss" scoped>
 .title {
 	font-size: 6em !important;
 	font-family: "Honk", system-ui;
