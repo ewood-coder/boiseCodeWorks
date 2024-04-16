@@ -129,8 +129,8 @@ This is the repo for all my projects at Boise CodeWorks!
 <hr />
 
 <h3 style="text-align:center;"><u>Week 4</u></h3>
-<a href="https://ewood-coder.github.io/boiseCodeWorks/Week6/vueMiner" target="_blank">
-			https://ewood-coder.github.io/boiseCodeWorks/Week6/vueMiner</a><br />
+<a href="https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week6/vueMiner" target="_blank">
+			https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week6/vueMiner</a><br />
 
 
 
