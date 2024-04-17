@@ -1,16 +1,18 @@
 <script setup>
 import { computed, onMounted } from 'vue';
-import { carsService } from '../services/CarsService.js';
 import Pop from '../utils/Pop.js';
 import { AppState } from '../AppState.js';
-import CarCard from '../components/CarCard.vue';
+import HouseCard from '../components/HouseCard.vue';
+import { housesService } from '../services/HousesService.js';
+import HouseFormModal from '../components/HouseFormModal.vue';
+
 
 const houses = computed(() => AppState.houses)
 const account = computed(() => AppState.account)
 
-async function getCars() {
+async function getHouses() {
 	try {
-		await carsService.getCars()
+		await housesService.getHouses()
 	}
 	catch (error) {
 		Pop.error(error);
@@ -18,7 +20,7 @@ async function getCars() {
 }
 
 onMounted(() => {
-	getCars()
+	getHouses()
 })
 
 </script>
@@ -28,23 +30,25 @@ onMounted(() => {
 	<div class="container">
 		<section class="row">
 			<div class="col-12 mt-3 d-flex align-items-center gap-4">
-				<h1>Cars</h1>
+				<h1>Houses</h1>
 				<!-- NOTE v-if="account != null" if the user is logged in, show the button -->
-				<button v-if="account" class="btn btn-outline-dark" title="Create a new car listing!" data-bs-toggle="modal"
-					data-bs-target="#carFormModal">
+				<button v-if="account" class="btn btn-outline-dark" title="Create a new house listing!"
+					data-bs-toggle="modal" data-bs-target="#houseFormModal">
 					<i class="mdi mdi-plus"></i>
 				</button>
 			</div>
 		</section>
 
+		<hr />
+
 		<section class="row">
-			<div v-for="car in cars" :key="car.id" class="col-12 mb-3">
-				<CarCard :car="car" />
+			<div v-for="house in houses" :key="house.id" class="col-12 mb-3">
+				<HouseCard :house="house" />
 			</div>
 		</section>
 	</div>
 
-	<CarFormModal />
+	<HouseFormModal />
 </template>
 
 
