@@ -5,11 +5,14 @@ import { Art } from '../models/Art.js';
 import { artService } from '../services/ArtService.js';
 import { computed, onMounted } from 'vue';
 import Pop from '../utils/Pop.js';
+import ArtCard from '../components/ArtCard.vue';
 
 
 onMounted(() => {
 	getArt()
 })
+
+const artworks = computed(() => AppState.artworks)
 
 async function getArt() {
 	try {
@@ -20,79 +23,78 @@ async function getArt() {
 		console.error(error)
 	}
 }
+
+async function nextPage() {
+	try {
+		await artService.nextPage()
+	}
+	catch (error) {
+		Pop.toast("Could not change page", 'error')
+	}
+}
+
+async function previousPage() {
+	try {
+		await artService.previousPage()
+	}
+	catch (error) {
+		Pop.toast("Could not change page", 'error')
+	}
+}
+
 </script>
 
+
+
+
 <template>
-	<main>
+	<div class="container-fluid newFont2">
 
-		<div class="container-fluid newFont2">
+		<section class="row text-center">
 
-			<section class="row text-center">
-
-				<div class="col-4 col-md-2 vl align-content-end">
-					<div class="sticky-bottom">
-						<div>
-							<i class="mdi mdi-book-open-blank-variant-outline fs-1"></i>
-							<p class="fs-4">1 of 27</p>
-						</div>
-						<div class="flex-wrap">
-							<button class="custom-btn btn-3 my-2 w-100"><span>Next</span></button>
-							<button class="custom-btn btn-3 my-2 w-100"><span>Previous</span></button>
-						</div>
+			<!-- SECTION: Pagination info & buttons -->
+			<div class="col-4 col-md-2 vl align-content-end">
+				<div class="sticky-bottom">
+					<div>
+						<i class="mdi mdi-book-open-blank-variant-outline fs-1"></i>
+						<p class="fs-4">1 of 27</p>
+					</div>
+					<div class="flex-wrap">
+						<button class="custom-btn btn-3 my-2 w-100" @click="nextPage()">
+							<span>Next</span>
+						</button>
+						<button :hidden="AppState.currentPage == 1" class="custom-btn btn-3 my-2 w-100"
+							@click="previousPage()">
+							<span>Previous</span>
+						</button>
 					</div>
 				</div>
+			</div>
 
 
-				<div class="col-8 col-md-10">
-					<div class="mt-4 fw-bold fs-3">Codeworks Institute Of Art</div>
+			<!-- SECTION: Art images -->
+			<div class="col-8 col-md-10">
+				<div class="mt-4 fw-bold fs-3">Codeworks Institute Of Art</div>
+				<hr />
+				<div class="p-1 p-md-2 justify-content-center d-flex flex-wrap align-items-center">
 
-					<hr />
+					<ArtCard v-for="art in artworks" :key="art.id" :art="art" />
 
-					<div class="row p-1 p-md-2 justify-content-center">
-						<div class="card">
-							<img class="" src="/src/assets/img/testImg.png" alt="Card image cap">
-						</div>
-						<div class="card">
-							<img class="" src="/src/assets/img/testImg.png" alt="Card image cap">
-						</div>
-						<div class="card">
-							<img class="" src="/src/assets/img/testImg.png" alt="Card image cap">
-						</div>
-						<div class="card">
-							<img class="" src="/src/assets/img/testImg.png" alt="Card image cap">
-						</div>
-						<div class="card">
-							<img class="" src="/src/assets/img/testImg.png" alt="Card image cap">
-						</div>
-						<div class="card">
-							<img class="" src="/src/assets/img/testImg.png" alt="Card image cap">
-						</div>
-					</div>
 				</div>
-			</section>
+			</div>
+		</section>
 
-		</div>
-
-	</main>
+	</div>
 </template>
 
-<style lang="scss">
+
+
+
+<style lang="scss" scoped>
 @import "../src/assets/scss/main.scss";
-
-:root {
-	--main-height: calc(100vh - 32px - 64px);
-}
-
-.newFont {
-	font-family: "Playfair Display", serif;
-}
 
 .newFont2 {
 	font-family: "Libre Baskerville", serif;
-}
-
-.bgColor {
-	background-color: #D9D9D9;
 }
 
 .vl {
@@ -100,46 +102,6 @@ async function getArt() {
 	height: auto;
 	margin: 1em 0 1em 0;
 }
-
-.card {
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-	max-width: 23em;
-	width: 100%;
-	height: auto;
-	object-fit: contain;
-	margin: 5px;
-	padding: 0;
-}
-
-@media only screen and (min-width: 767) {
-	.card {
-		box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-		max-width: 18em;
-		width: 100%;
-		height: auto;
-		object-fit: contain;
-		margin: 5px;
-		padding: 0;
-	}
-}
-
-@media only screen and (max-width: 1023px) {
-	.card {
-		box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-		max-width: 18em;
-		width: 100%;
-		height: auto;
-		object-fit: contain;
-		margin: 5px;
-		padding: 0;
-	}
-}
-
-.sticky {
-	overflow: hidden;
-}
-
-
 
 // -----------------------------------------
 .custom-btn {
@@ -164,7 +126,7 @@ async function getArt() {
 
 .btn-3:hover {
 	background: transparent;
-	color: #818181;
+	color: #0a966c;
 }
 
 .btn-3 span {
@@ -180,7 +142,7 @@ async function getArt() {
 	content: "";
 	left: 0;
 	top: 0;
-	background: #888888;
+	background: #0a966c;
 	transition: all 0.3s ease;
 }
 
@@ -208,7 +170,7 @@ async function getArt() {
 	content: "";
 	right: 0;
 	bottom: 0;
-	background: #888888;
+	background: #0a966c;
 	transition: all 0.3s ease;
 }
 

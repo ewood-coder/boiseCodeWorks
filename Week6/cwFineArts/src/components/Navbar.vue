@@ -73,4 +73,8 @@ a:hover {
 .borderBtm {
 	box-shadow: 0px 0px 5px 3px rgb(105, 105, 105);
 }
+
+.newFont {
+	font-family: "Playfair Display", serif;
+}
 </style>
