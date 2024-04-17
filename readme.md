@@ -135,5 +135,9 @@ This is the repo for all my projects at Boise CodeWorks!
 <a href="https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week6/cwFineArts" target="_blank">
 			https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week6/cwFineArts</a><br />
 
+<a href="https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week6/gregsListVue" target="_blank">
+			https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week6/gregsListVue</a><br />
+
+
 
 </div>
