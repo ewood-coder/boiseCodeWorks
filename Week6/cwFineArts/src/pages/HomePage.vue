@@ -57,10 +57,10 @@ async function previousPage() {
 				<div class="sticky-bottom">
 					<div>
 						<i class="mdi mdi-book-open-blank-variant-outline fs-1"></i>
-						<p class="fs-4">1 of 27</p>
+						<p class="fs-4">{{ AppState.currentPage }} of {{ AppState.totalPages }}</p>
 					</div>
 					<div class="flex-wrap">
-						<button class="custom-btn btn-3 my-2 w-100" @click="nextPage()">
+						<button :hidden="AppState.currentPage == 35" class="custom-btn btn-3 my-2 w-100" @click="nextPage()">
 							<span>Next</span>
 						</button>
 						<button :hidden="AppState.currentPage == 1" class="custom-btn btn-3 my-2 w-100"
