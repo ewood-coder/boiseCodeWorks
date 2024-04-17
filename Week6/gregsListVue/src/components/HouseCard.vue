@@ -32,7 +32,7 @@ async function destroyHouse(houseId) {
 	<div class="bg-light rounded shadow d-flex justify-content-between">
 		<img :src="house.imgUrl" :alt="house.description + ' ' + house.price" class="img-fluid house-img rounded-start">
 		<div class="p-3 w-100">
-			<div class="row justify-content-between text-center">
+			<div class="row justify-content-evenly text-center flex-wrap">
 				<h4 class="col-3">Year Built: <span class="fw-normal">{{ house.year }}</span></h4>
 				<h4 class="col-3">Bedrooms: <span class="fw-normal">{{ house.bedrooms }}</span></h4>
 				<h4 class="col-3">Bathrooms: <span class="fw-normal">{{ house.bathrooms }}</span></h4>
