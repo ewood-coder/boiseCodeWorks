@@ -48,15 +48,18 @@ function showModal() {
 
 	<dialog ref="dialog">
 		<img :src=props.art.imgUrls.regular alt="Card image cap" class="responsive">
-		<p>{{ props.art.description }}</p>
+		<h3 class="mt-4"><u>Description:</u></h3>
+		<p class="p-3 fs-5">{{ props.art.description }}</p>
 
-		<p class="fw-bold fs-3 mt-4">Admirers:</p>
-		<img v-for="profile in props.art.admirers" :key="profile.id" :src="profile.picture" class="pfp"
-			:title="profile.name">
+		<div class="pfpBG">
+			<p class="fw-bold fs-3 mt-4 text-light">Admirers:</p>
+			<img v-for="profile in props.art.admirers" :key="profile.id" :src="profile.picture" class="pfp"
+				:title="profile.name">
 
-		<form method="dialog">
-			<button class="btn btn-danger m-2">Close</button>
-		</form>
+			<form method="dialog">
+				<button class="btn btn-danger m-2">Close</button>
+			</form>
+		</div>
 	</dialog>
 
 </template>
@@ -77,6 +80,12 @@ function showModal() {
 	width: 5rem;
 	height: 5rem;
 	border-radius: 9999px;
+	margin: 5px;
+}
+
+.pfpBG {
+	background-color: #0a966c;
+	border-radius: 20px;
 }
 
 .card {
