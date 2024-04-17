@@ -28,8 +28,9 @@ async function getArt() {
 		<div class="container-fluid newFont2">
 
 			<section class="row text-center">
-				<div class="col-4 col-md-2 pb-3 vl sticky">
-					<span class="sticky-bottom">
+
+				<div class="col-4 col-md-2 vl align-content-end">
+					<div class="sticky-bottom">
 						<div>
 							<i class="mdi mdi-book-open-blank-variant-outline fs-1"></i>
 							<p class="fs-4">1 of 27</p>
@@ -38,7 +39,7 @@ async function getArt() {
 							<button class="custom-btn btn-3 my-2 w-100"><span>Next</span></button>
 							<button class="custom-btn btn-3 my-2 w-100"><span>Previous</span></button>
 						</div>
-					</span>
+					</div>
 				</div>
 
 

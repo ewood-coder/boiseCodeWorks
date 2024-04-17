@@ -14,50 +14,6 @@ import { artService } from './services/ArtService.js';
 	</header>
 	<main>
 		<HomePage />
-
-		<!-- <div class="container-fluid newFont2">
-
-			<section class="row text-center">
-				<div class="col-4 col-md-2 pb-3 vl sticky">
-					<span class="sticky-bottom">
-						<div>
-							<i class="mdi mdi-book-open-blank-variant-outline fs-1"></i>
-							<p class="fs-4">1 of 27</p>
-						</div>
-						<div class="flex-wrap">
-							<button class="custom-btn btn-3 my-2 w-100"><span>Next</span></button>
-							<button class="custom-btn btn-3 my-2 w-100"><span>Previous</span></button>
-						</div>
-					</span>
-				</div>
-
-
-				<div class="col-8 col-md-10">
-					<div class="row p-1 p-md-2 justify-content-center">
-						<div class="card">
-							<img class="" src="/src/assets/img/testImg.png" alt="Card image cap">
-						</div>
-						<div class="card">
-							<img class="" src="/src/assets/img/testImg.png" alt="Card image cap">
-						</div>
-						<div class="card">
-							<img class="" src="/src/assets/img/testImg.png" alt="Card image cap">
-						</div>
-						<div class="card">
-							<img class="" src="/src/assets/img/testImg.png" alt="Card image cap">
-						</div>
-						<div class="card">
-							<img class="" src="/src/assets/img/testImg.png" alt="Card image cap">
-						</div>
-						<div class="card">
-							<img class="" src="/src/assets/img/testImg.png" alt="Card image cap">
-						</div>
-					</div>
-				</div>
-			</section>
-
-		</div> -->
-
 	</main>
 </template>
 
