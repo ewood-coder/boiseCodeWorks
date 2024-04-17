@@ -53,8 +53,8 @@ async function previousPage() {
 		<section class="row text-center">
 
 			<!-- SECTION: Pagination info & buttons -->
-			<div class="col-4 col-md-2 vl align-content-end">
-				<div class="sticky-bottom">
+			<div class="col-4 col-md-2 vl align-content-start">
+				<div class="sticky-top">
 					<div>
 						<i class="mdi mdi-book-open-blank-variant-outline fs-1"></i>
 						<p class="fs-4">{{ AppState.currentPage }} of {{ AppState.totalPages }}</p>

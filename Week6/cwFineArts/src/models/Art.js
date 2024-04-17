@@ -8,5 +8,6 @@ export class Art {
 		this.imgUrls = data.imgUrls
 		this.description = data.description
 		this.attribution = data.attribution
+		this.admirers = data.admirers
 	}
 }

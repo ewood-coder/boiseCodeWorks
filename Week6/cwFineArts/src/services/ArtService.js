@@ -1,7 +1,7 @@
 import { AppState } from "../AppState.js"
 import { Art } from "../models/Art.js"
 import { api } from "./AxiosService.js"
-``
+import { baseURL } from "../env.js"
 
 
 
@@ -26,6 +26,14 @@ class ArtService {
 		if (AppState.currentPage - 1 > AppState.totalPages) return
 		AppState.currentPage--
 		await artService.getArt()
+	}
+
+	async likeArt(art) {
+		const response = await api.post(`api/artworks/${art.id}/admire`)
+		console.log(response.data)
+
+		const foundArt = AppState.artworks.find(a => a.id == art.id)
+		foundArt.admirers = response.data.admirers
 	}
 
 }
