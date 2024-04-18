@@ -7,9 +7,11 @@ import { blogsService } from '../services/BlogsService.js';
 import { Blog } from '../models/Blog.js';
 
 
-defineProps({
-	blog: Blog
-})
+// defineProps({
+// 	blog: Blog
+// })
+
+defineProps({ blog: { type: Blog, required: true } })
 
 const account = computed(() => AppState.account)
 const blogs = computed(() => AppState.blogs)
@@ -31,18 +33,23 @@ async function destroyBlog(blogId) {
 
 <template>
 
-	<div class="bg-light rounded shadow d-flex justify-content-between brdr">
+	<div class="bg-light rounded shadow d-flex flex-wrap justify-content-between brdr">
 
-		<div class="col-8">
+		<div class="col-12 col-md-6 col-lg-8">
 			<div class="p-3 w-100">
 				<div class="d-flex gap-3">
 					<img :src=blog.creator.picture alt="picture of creator" class="pfp">
-					<h4 class="align-content-center"> {{ blog.creator.name }}</h4>
+					<RouterLink :to="{ name: 'Profile', params: { profileId: blog.creatorId } }"
+						class="align-content-center">
+
+						<h4> {{ blog.creator.name }}</h4>
+
+					</RouterLink>
 				</div>
 
 				<hr />
 
-				<h4 class="fw-bold text-decoration-underline">{{ blog.title }}</h4>
+				<h4 class="fw-bold text-decoration-underline mb-4">{{ blog.title }}</h4>
 
 				<!-- NOTE: This is the css version of the line below it -->
 				<!-- <p class="preview">{{ blog.body }}</p> -->
@@ -57,7 +64,7 @@ async function destroyBlog(blogId) {
 			</div>
 		</div>
 
-		<div class="col-4 p-2 d-flex align-items-center">
+		<div class="col-12 col-md-6 col-lg-4 p-2 d-flex">
 			<img :src="blog.imgUrl" :alt="blog.title" class="img-fluid blog-img">
 		</div>
 
@@ -75,13 +82,14 @@ async function destroyBlog(blogId) {
 
 .brdr {
 	border: solid black 2px;
+	overflow: hidden;
 }
 
 .blog-img {
 	width: 100%;
 	height: auto;
-	max-height: 20em;
-	// object-fit: cover;
+	// max-height: 20em;
+	object-fit: cover;
 	border-radius: 15px;
 }
 

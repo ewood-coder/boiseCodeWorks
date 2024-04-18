@@ -1,9 +1,9 @@
 <script setup>
 import { computed, onMounted } from 'vue';
 import Pop from '../utils/Pop.js';
+import { blogsService } from '../services/BlogsService.js';
 import { AppState } from '../AppState.js';
 import BlogCard from '../components/BlogCard.vue';
-import { blogsService } from '../services/BlogsService.js';
 import BlogFormModal from '../components/BlogFormModal.vue';
 
 

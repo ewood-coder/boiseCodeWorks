@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { AppState } from '../AppState'
 import { AuthService } from '../services/AuthService'
+import { RouterLink } from 'vue-router';
 
 const user = computed(() => AppState.user)
 const account = computed(() => AppState.account)
@@ -16,7 +17,7 @@ async function logout() {
 
 <template>
 	<span class="navbar-text">
-		<button class="btn selectable text-success lighten-30 text-uppercase my-2 my-lg-0 fw-bold" @click="login"
+		<button class="btn selectable text-success lighten-30 text-uppercase my-2 my-lg-0" @click="login"
 			v-if="!user?.isAuthenticated">
 			Login
 		</button>
@@ -28,6 +29,7 @@ async function logout() {
 						<img :src="account?.picture || user?.picture" alt="account photo" height="40" class="rounded" />
 					</div>
 				</div>
+				<!-- NOTE dropdown list after logged on -->
 				<div class="dropdown-menu dropdown-menu-sm-end dropdown-menu-start p-0" aria-labelledby="authDropdown">
 					<div class="list-group">
 						<router-link :to="{ name: 'Account' }">
@@ -35,6 +37,11 @@ async function logout() {
 								Manage Account
 							</div>
 						</router-link>
+						<RouterLink v-if="account" :to="{ name: 'Profile', params: { profileId: account.id } }">
+							<div class="list-group-item dropdown-item list-group-item-action">
+								Your Profile
+							</div>
+						</RouterLink>
 						<div class="list-group-item dropdown-item list-group-item-action text-danger selectable"
 							@click="logout">
 							<i class="mdi mdi-logout"></i>

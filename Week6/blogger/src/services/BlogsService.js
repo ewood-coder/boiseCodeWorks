@@ -38,6 +38,15 @@ class BlogsService {
 		response.data.reverse()
 		AppState.blogs = response.data.map(pojo => new Blog(pojo))
 	}
+
+	async getProfileBlogs(profileId) {
+		AppState.profileBlogs = []
+		const response = await api.get(`api/blogs?creatorId=${profileId}`)
+		console.log('🧑‍🎨🖼️', response.data)
+		const blogs = response.data.map(blog => new Blog(blog))
+
+		AppState.profileBlogs = blogs
+	}
 }
 
 export const blogsService = new BlogsService()
