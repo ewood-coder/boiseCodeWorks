@@ -26,16 +26,12 @@ function likeArt() {
 
 const dialog = ref()
 
-function showModal() {
-	dialog.value.showModal()
-}
-
 </script>
 
 <template>
 
 	<div class="card">
-		<img :src=props.art.imgUrls.regular alt="Card image cap" @click="showModal()" class="pointer">
+		<img :src=props.art.imgUrls.regular alt="Card image cap" @click="dialog.showModal()" class="pointer">
 		<button class="btn btn-success imgCorners" @click="likeArt()" v-if="!isLiked">
 			<i class="mdi mdi-thumb-up"></i>
 		</button>
