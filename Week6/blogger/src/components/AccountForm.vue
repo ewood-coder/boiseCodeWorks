@@ -55,35 +55,17 @@ async function saveAccount() {
 				class="form-control"></textarea>
 		</div>
 
-		<div class="mb-3 col-6">
+		<!-- <div class="mb-3 col-6">
 			<label for="account-linkedin-link">Linkedin</label>
 			<input v-model="accountData.linkedin" class="form-control" type="url" id="account-linkedin-link"
 				maxlength="500">
-		</div>
+		</div> -->
 
 		<div class="mb-3 col-6 d-flex align-items-end justify-content-end">
 			<button class="btn btn-success w-50">Save <i class="mdi mdi-floppy"></i></button>
 		</div>
 
 	</form>
-
-
-
-	<!-- NOTE duplicating the templated from the profile page, and binding all the data to account data, allows us to preview what it might look like -->
-	<section class="row" v-if="accountData">
-		<img class="cover-img" :src="accountData.coverImg" alt="">
-		<div class="col-12 text-center">
-			<img class="accountData-img" :src="accountData.picture" alt="">
-			<h2>{{ accountData.name }}</h2>
-		</div>
-		<div class="col-12">
-			<p class="mt-2">{{ accountData.bio }}</p>
-		</div>
-		<div class="col-6">
-			<a v-if="accountData.linkedin" :href="accountData.linkedin" target="_blank"><i
-					class="mdi mdi-linkedin fs-4"></i></a>
-		</div>
-	</section>
 </template>
 
 

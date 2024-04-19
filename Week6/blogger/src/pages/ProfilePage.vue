@@ -10,7 +10,6 @@ import { profilesService } from '../services/ProfilesService.js';
 
 
 const profile = computed(() => AppState.activeProfile)
-
 const blogs = computed(() => AppState.profileBlogs)
 
 const route = useRoute()
@@ -47,16 +46,16 @@ onMounted(() => {
 		<section class="row" v-if="profile">
 			<img class="cover-img" :src="profile.coverImg" alt="">
 			<div class="col-12 text-center">
-				<img class="profile-img" :src="profile.picture" alt="">
+				<img class="profile-img mt-3" :src="profile.picture" alt="">
 				<h2 class="mt-2">{{ profile.name }}</h2>
 			</div>
 			<div class="col-12">
 				<p class="mt-2 text-center">{{ profile.bio }}</p>
 			</div>
-			<div class="col-6">
+			<!-- <div class="col-12 text-end mb-3">
 				<a v-if="profile.linkedin" :href="profile.linkedin" target="_blank"><i
 						class="mdi mdi-linkedin fs-4"></i></a>
-			</div>
+			</div> -->
 		</section>
 
 		<section class="row justify-content-center">

@@ -13,10 +13,12 @@ class BlogsService {
 		const blogs = AppState.blogs
 
 		const blogIndex = blogs.findIndex(blog => blog.id == blogId)
+		// AppState.blogs = blogs.filter(blog => blog.id != blogId)
 
 		if (blogIndex == -1) throw new Error("You messed on findIndex, big dawg")
 
 		blogs.splice(blogIndex, 1)
+		AppState.blogs = blogs
 	}
 
 	async createBlog(blogData) {
@@ -34,8 +36,6 @@ class BlogsService {
 		// NOTE logger is similar to console, will not break your application during deployment
 		logger.log('GOT BLOGS ✈️', response.data);
 
-		// reverses arrary order
-		response.data.reverse()
 		AppState.blogs = response.data.map(pojo => new Blog(pojo))
 	}
 

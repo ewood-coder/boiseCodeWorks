@@ -53,7 +53,11 @@ async function destroyBlog(blogId) {
 
 				<!-- NOTE: This is the css version of the line below it -->
 				<!-- <p class="preview">{{ blog.body }}</p> -->
-				<p>{{ blog.body.split(' ').slice(0, 30).join(' ') + "..." }}</p>
+
+				<!-- NOTE: This is if you want to shorten the words displayed in the whole text body -->
+				<!-- <p>{{ blog.body.split(' ').slice(0, 30).join(' ') + "..." }}</p> -->
+				<p>{{ blog.body }}</p>
+
 
 				<h5 class="mt-5"><u><b>Posted</b></u>: {{ blog.createdAt.toLocaleDateString() }}</h5>
 
