@@ -141,15 +141,15 @@ This is the repo for all my projects at Boise CodeWorks!
 <a href="https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week6/blogger" target="_blank">
 			https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week6/blogger</a><br /><br />
 
-<!-- <span>
+<span>
 <b>Week 6 Checkpoint:</b>
-<a href="https://ewood-coder.github.io/inspireCP4/" target="_blank">
-			https://ewood-coder.github.io/inspireCP4/</a><br /><br />
+<a href="https://github.com/ewood-coder/networkCP6" target="_blank">
+			https://github.com/ewood-coder/networkCP6</a><br /><br />
 </span>
 
 <hr />
 
-<h3 style="text-align:center;"><u>Week 7</u></h3> -->
+<h3 style="text-align:center;"><u>Week 7</u></h3>
 
 
 
