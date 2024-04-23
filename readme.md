@@ -150,7 +150,7 @@ This is the repo for all my projects at Boise CodeWorks!
 <hr />
 
 <h3 style="text-align:center;"><u>Week 7</u></h3>
-<h5><b>NO LABS THIS WEEK (focus on checkpoint)</b></h5>
+<h5><b>NO LABS THIS WEEK (focus on checkpoint)</b></h5><br /><br />
 
 <span>
 <b>Week 7 Checkpoint:</b>
