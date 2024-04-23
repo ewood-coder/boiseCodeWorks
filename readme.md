@@ -128,7 +128,7 @@ This is the repo for all my projects at Boise CodeWorks!
 
 <hr />
 
-<h3 style="text-align:center;"><u>Week 4</u></h3>
+<h3 style="text-align:center;"><u>Week 6</u></h3>
 <a href="https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week6/vueMiner" target="_blank">
 			https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week6/vueMiner</a><br />
 
@@ -150,6 +150,15 @@ This is the repo for all my projects at Boise CodeWorks!
 <hr />
 
 <h3 style="text-align:center;"><u>Week 7</u></h3>
+<h5><b>NO LABS THIS WEEK (focus on checkpoint)</b></h5>
+
+<span>
+<b>Week 7 Checkpoint:</b>
+<a href="https://github.com/ewood-coder/towerCP7" target="_blank">
+			https://github.com/ewood-coder/towerCP7</a><br /><br />
+</span>
+
+<hr />
 
 
 
