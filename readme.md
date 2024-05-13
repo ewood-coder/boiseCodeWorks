@@ -124,7 +124,7 @@ This is the repo for all my projects at Boise CodeWorks!
 <span>
 <b>Week 5 Checkpoint:</b>
 <p>NO CHECKPOINT THIS WEEK</p>
-</span>
+</span><br />
 
 <hr />
 
