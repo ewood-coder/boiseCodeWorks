@@ -123,7 +123,7 @@ This is the repo for all my projects at Boise CodeWorks!
 
 <span>
 <b>Week 5 Checkpoint:</b>
-<p>NO CHECKPOINT THIS WEEK</p><br /><br />
+<p>NO CHECKPOINT THIS WEEK</p><br />
 </span>
 
 <hr />
