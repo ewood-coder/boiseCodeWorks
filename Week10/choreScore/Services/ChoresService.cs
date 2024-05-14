@@ -40,10 +40,6 @@ public class ChoresService
 	}
 
 
-
-
-
-
 	internal Chore GetChoreById(int choreId)
 	{
 		Chore chore = _repository.GetChoreById(choreId);

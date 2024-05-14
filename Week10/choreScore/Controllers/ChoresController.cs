@@ -69,9 +69,6 @@ public class ChoresController : ControllerBase
 
 
 
-
-
-
 	[HttpGet("{choreId}")]
 	public ActionResult<Chore> GetChoreById(int choreId)
 	{
