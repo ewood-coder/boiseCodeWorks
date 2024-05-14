@@ -44,10 +44,6 @@ public class ChoresRepository
 
 
 
-
-
-
-
 	internal Chore GetChoreById(int choreId)
 	{
 		string sql = "SELECT * FROM chores WHERE id = @choreId;";
