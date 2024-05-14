@@ -1,9 +1,0 @@
-version: '3'
-services:
-  app:
-    image: your-dockerhub-username/gregsListCSharp:latest
-    restart: unless-stopped
-    env_file:
-      - gregsListCSharp-env
-    ports:
-      - "7045:80"

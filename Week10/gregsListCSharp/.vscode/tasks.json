@@ -7,7 +7,7 @@
 			"type": "process",
 			"args": [
 				"build",
-				"${workspaceFolder}/server/gregsListCSharp.csproj",
+				"${workspaceFolder}/spring24_gregslist_csharp-main/server/csharp_gregslist_api.csproj",
 				"/property:GenerateFullPaths=true",
 				"/consoleloggerparameters:NoSummary;ForceNoAlign"
 			],
@@ -19,7 +19,7 @@
 			"type": "process",
 			"args": [
 				"publish",
-				"${workspaceFolder}/server/gregsListCSharp.csproj",
+				"${workspaceFolder}/spring24_gregslist_csharp-main/server/csharp_gregslist_api.csproj",
 				"/property:GenerateFullPaths=true",
 				"/consoleloggerparameters:NoSummary;ForceNoAlign"
 			],
@@ -33,7 +33,7 @@
 				"watch",
 				"run",
 				"--project",
-				"${workspaceFolder}/server/gregsListCSharp.csproj"
+				"${workspaceFolder}/spring24_gregslist_csharp-main/server/csharp_gregslist_api.csproj"
 			],
 			"problemMatcher": "$msCompile"
 		}

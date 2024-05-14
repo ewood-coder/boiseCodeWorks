@@ -10,9 +10,9 @@
 			"request": "launch",
 			"preLaunchTask": "build",
 			// If you have changed target frameworks, make sure to update the program path.
-			"program": "${workspaceFolder}/server/bin/Debug/net8.0/gregsListCSharp.dll",
+			"program": "${workspaceFolder}/spring24_gregslist_csharp-main/server/bin/Debug/net8.0/csharp_gregslist_api.dll",
 			"args": [],
-			"cwd": "${workspaceFolder}/server",
+			"cwd": "${workspaceFolder}/spring24_gregslist_csharp-main/server",
 			"stopAtEntry": false,
 			// Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
 			"serverReadyAction": {
