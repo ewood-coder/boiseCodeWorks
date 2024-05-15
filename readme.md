@@ -166,8 +166,8 @@ This is the repo for all my projects at Boise CodeWorks!
 
 <span>
 <b>Week 8-9 CAPSTONE project: WILL BE UPLOADED WHEN HOSTED</b><br /><br />
-<a href="https://github.com/ewood-coder/towerCP7" target="_blank">
-			https://github.com/ewood-coder/towerCP7</a>
+<!-- <a href="https://github.com/ewood-coder/towerCP7" target="_blank">
+			https://github.com/ewood-coder/towerCP7</a> -->
 </span>
 
 <hr />
