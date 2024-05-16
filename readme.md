@@ -179,6 +179,10 @@ This is the repo for all my projects at Boise CodeWorks!
 <a href="https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week10/gregsListCSharp" target="_blank">
 			https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week10/gregsListCSharp</a><br />
 
-
+<span>
+<b>Week 10 Checkpoint:</b>
+<a href="https://github.com/ewood-coder/allSpiceCP8" target="_blank">
+			https://github.com/ewood-coder/allSpiceCP8</a><br /><br />
+</span>
 
 </div>
