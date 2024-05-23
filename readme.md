@@ -172,7 +172,7 @@ This is the repo for all my projects at Boise CodeWorks!
 
 <hr />
 
-<h3 style="text-align:center;"><u>Week 10</u></h3>
+<h3 style="text-align:center;"><u>Week 10-11</u></h3>
 <a href="https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week10/choreScore" target="_blank">
 			https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week10/choreScore</a><br />
 
