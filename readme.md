@@ -161,7 +161,7 @@ This is the repo for all my projects at Boise CodeWorks!
 <hr />
 
 <h3 style="text-align:center;"><u>Week 8-9</u></h3>
-<h5><b>NO LABS THIS WEEK (focus on capstone project)</b></h5><br /><br />
+<h5><b>NO LABS THIS WEEK (focus on capstone project)</b></h5><br />
 
 
 <span>
