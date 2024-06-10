@@ -165,9 +165,9 @@ This is the repo for all my projects at Boise CodeWorks!
 
 
 <span>
-<b>Week 8-9 CAPSTONE project: WILL BE UPLOADED WHEN HOSTED</b><br /><br />
-<!-- <a href="https://github.com/ewood-coder/towerCP7" target="_blank">
-			https://github.com/ewood-coder/towerCP7</a> -->
+<b>Week 8-9 CAPSTONE project: Spuditions</b><br /><br />
+<a href="https://www.spuditions.com/" target="_blank">
+			https://www.spuditions.com/</a>
 </span>
 
 <hr />
