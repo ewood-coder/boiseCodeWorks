@@ -123,8 +123,8 @@ This is the repo for all my projects at Boise CodeWorks!
 
 <span>
 <b>Week 5 Checkpoint:</b>
-<p>NO CHECKPOINT THIS WEEK</p>
-</span><br />
+<p>NO CHECKPOINT THIS WEEK</p><br /><br />
+</span>
 
 <hr />
 
@@ -150,7 +150,7 @@ This is the repo for all my projects at Boise CodeWorks!
 <hr />
 
 <h3 style="text-align:center;"><u>Week 7</u></h3>
-<h5><b>NO LABS THIS WEEK (focus on checkpoint)</b></h5>
+<h5><b>NO LABS THIS WEEK (focus on checkpoint)</b></h5><br />
 
 <span>
 <b>Week 7 Checkpoint:</b>
@@ -161,7 +161,7 @@ This is the repo for all my projects at Boise CodeWorks!
 <hr />
 
 <h3 style="text-align:center;"><u>Week 8-9</u></h3>
-<h5><b>NO LABS THIS WEEK (focus on capstone project)</b></h5><br /><br />
+<h5><b>NO LABS THIS WEEK (focus on capstone project)</b></h5><br />
 
 
 <span>
@@ -172,17 +172,29 @@ This is the repo for all my projects at Boise CodeWorks!
 
 <hr />
 
-<h3 style="text-align:center;"><u>Week 10</u></h3>
+<h3 style="text-align:center;"><u>Week 10-11</u></h3>
 <a href="https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week10/choreScore" target="_blank">
 			https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week10/choreScore</a><br />
 
 <a href="https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week10/gregsListCSharp" target="_blank">
-			https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week10/gregsListCSharp</a><br />
+			https://github.com/ewood-coder/boiseCodeWorks/tree/main/Week10/gregsListCSharp</a><br /><br />
 
 <span>
-<b>Week 10 Checkpoint:</b>
+<b>Week 10-11 Checkpoint:</b>
 <a href="https://github.com/ewood-coder/allSpiceCP8" target="_blank">
 			https://github.com/ewood-coder/allSpiceCP8</a><br /><br />
 </span>
+
+<hr />
+
+<h3 style="text-align:center;"><u>Week 12</u></h3>
+
+<span>
+<b>Week 12 FINAL:</b>
+<a href="https://github.com/ewood-coder/keeprFINAL" target="_blank">
+			https://github.com/ewood-coder/keeprFINAL</a><br /><br />
+</span>
+
+
 
 </div>
